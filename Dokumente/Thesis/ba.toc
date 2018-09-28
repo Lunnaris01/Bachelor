@@ -1,0 +1,49 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1}Abstract}{1}{section.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}Introduction}{1}{section.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1}Motivation/Objectives}{1}{subsection.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3}Reinforcement Learning Frameworks}{2}{section.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1}Elements of Reinforcement Learning}{2}{subsection.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2}Markov Decision Process}{3}{subsection.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4}Actor-Critic Methods}{4}{section.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1}Actor-Only Methods}{4}{subsection.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2}Critic-Only Methods}{4}{subsection.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3}Actor-Critic Methods}{5}{subsection.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4}A3C : Asynchronous Advantage Actor-Critic}{5}{subsection.4.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5}Off-Policy Learning}{6}{section.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1}Importance-Sampling}{6}{subsection.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2}Q-Retrace}{6}{subsection.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6}ACER : Actor-Critic with Experience Replay}{7}{section.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7}Experimental Setup}{8}{section.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8}Experiments}{9}{section.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.1}Hyperparameter Robustness}{9}{subsection.8.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.2}Adversial Attacks}{9}{subsection.8.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.3}Results}{10}{subsection.8.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9}Conclusion}{10}{section.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {10}References}{11}{section.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{List of Figures}{12}{section*.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{List of Tables}{12}{section*.5}

@@ -24,6 +24,11 @@ class ACERNetwork(object):
 
         with tf.variable_scope("net_" + scope):
             self.pi, self.quality = create_network(self.tf_states, self.action_n, network_type, self.action_n)
+        mask = tf.range(0, tf.shape(self.pi)[0]) * tf.shape(self.pi)[1] + self.tf_actions
+        self.action_quality = tf.gather(tf.reshape(self.quality, [-1]), mask)
+        with tf.name_scope("values"):
+            self.values = tf.reduce_sum(tf.multiply(self.quality, tf.stop_gradient(self.pi)), axis=-1)
+
 
         self.tf_trainable = tf.trainable_variables("net_" + scope)
 
@@ -31,17 +36,10 @@ class ACERNetwork(object):
             self.tf_q_retrace_targets = tf.placeholder(tf.float32, shape=[None], name="retrace_targets")
             self.tf_importance_weights = tf.placeholder(tf.float32, shape=[None, self.action_n], name="Importance_weights")
 
-            with tf.name_scope("values"):
-                self.values = tf.reduce_sum(tf.multiply(self.quality, tf.stop_gradient(self.pi)), axis=-1)
-
             self.advantages = self.tf_q_retrace_targets - self.values
-            mask = tf.range(0, tf.shape(self.pi)[0]) * tf.shape(self.pi)[1] + self.tf_actions
-
             self.log_pi = tf.log(tf.clip_by_value(self.pi, eps, 1 - eps))
-
             self.action_prob = tf.gather(tf.reshape(self.pi, [-1]), mask)
             self.action_log_prob = tf.gather(tf.reshape(self.log_pi, [-1]), mask)
-            self.action_quality = tf.gather(tf.reshape(self.quality, [-1]), mask)
             self.action_importance_weights = tf.gather(tf.reshape(self.tf_importance_weights, [-1]), mask)
 
             with tf.name_scope("losses"):
@@ -84,8 +82,8 @@ class ACERNetwork(object):
 
     def get_retrace_values(self, states, actions):
         states = self.prep_states(states)
-        vals = self.sess.run([self.pi, self.action_quality, self.values],
-                             {self.tf_states: states, self.tf_actions: actions})
+        vals = self.sess.run([self.GlobalNet.pi, self.action_quality, self.values],
+                             {self.tf_states: states, self.tf_actions: actions, self.GlobalNet.tf_states: states})
         return vals
 
     def update_target(self):

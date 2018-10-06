@@ -1,9 +1,15 @@
 [0] Config.pm:321> INFO - This is Biber 1.9
-[1] Config.pm:324> INFO - Logfile is 'ba.blg'
-[33] biber:277> INFO - === Di Sep 25, 2018, 17:36:42
-[34] Biber.pm:334> INFO - Reading 'ba.bcf'
-[104] Biber.pm:636> INFO - Found 0 citekeys in bib section 0
-[104] Utils.pm:144> WARN - The file 'ba.bcf' does not contain any citations!
-[120] bbl.pm:517> INFO - Writing 'ba.bbl' with encoding 'UTF-8'
-[121] bbl.pm:606> INFO - Output to ba.bbl
-[121] Biber.pm:107> INFO - WARNINGS: 1
+[0] Config.pm:324> INFO - Logfile is 'ba.blg'
+[32] biber:277> INFO - === Sa Okt  6, 2018, 16:24:55
+[32] Biber.pm:334> INFO - Reading 'ba.bcf'
+[105] Biber.pm:636> INFO - Found 5 citekeys in bib section 0
+[122] Biber.pm:3052> INFO - Processing section 0
+[143] Biber.pm:3190> INFO - Looking for bibtex format file 'references.bib' for section 0
+[145] bibtex.pm:979> INFO - Decoding LaTeX character macros into UTF-8
+[147] bibtex.pm:853> INFO - Found BibTeX data source 'references.bib'
+[271] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[271] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[271] Biber.pm:2929> INFO - Sorting list 'nyt' of type 'entry' with scheme 'nyt' and locale 'en-US'
+[272] Biber.pm:2933> INFO - No sort tailoring available for locale 'en-US'
+[294] bbl.pm:517> INFO - Writing 'ba.bbl' with encoding 'UTF-8'
+[296] bbl.pm:606> INFO - Output to ba.bbl

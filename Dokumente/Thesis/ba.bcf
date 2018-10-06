@@ -1968,6 +1968,11 @@
     <bcf:datasource type="file" datatype="bibtex">references.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
+    <bcf:citekey order="1">mnih2015atari</bcf:citekey>
+    <bcf:citekey order="2">Shogi17</bcf:citekey>
+    <bcf:citekey order="3">Go2017</bcf:citekey>
+    <bcf:citekey order="4">OpenAI_dota</bcf:citekey>
+    <bcf:citekey order="5">ACER</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="nyt" type="entry" sortscheme="nyt">
   <bcf:sorting>

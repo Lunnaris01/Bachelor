@@ -1,16 +1,17 @@
 import numpy as np
 import tensorflow as tf
 from utils import lambda_return, q_retrace, rollout
+from ReplayBuffer import *
 
 
 class Worker(object):
 
-    def __init__(self, agent, env, sess, worker_id, replay_buffer, k_steps=20, DISCOUNT=0.99, step_limit=5000000, offline_steps = 0):
+    def __init__(self, agent, env, sess, worker_id, k_steps=20, DISCOUNT=0.99, step_limit=5000000, offline_steps = 0):
         self.agent = agent
         self.env = env
         self.sess = sess
         self.name = "worker_"+worker_id
-        self.memory = replay_buffer
+        self.memory = ReplayBuffer(2500)
         self.RETURN_STEPS = k_steps
         self.DISCOUNT = DISCOUNT
         self.MAX_STEPS = step_limit
@@ -78,7 +79,7 @@ class Worker(object):
                     print("Worker ", self.name, "At ", step, " Running/Max: ", runningreward, bestreward, " Frames:", self.memory.counter)
                     print("pi:", self.agent.get_pi(b_states[-1]))
                     print("Saving Model")
-                    next_verbose +=(self.MAX_STEPS/5000)
+                    next_verbose +=(self.MAX_STEPS/100)
                     net_saver.save(self.sess, TB_DIR + "checkpoints/model" + str(step) + ".cptk")
                 if sum is not None:
                     summary_writer.add_summary(sum, step)

@@ -5,7 +5,7 @@ from policies import create_network
 
 class ACERNetwork(object):
 
-    def __init__(self, session, env, scope="global", GlobalNet=None, lr=7e-4, decay=0.99, eps=1e-6,
+    def __init__(self, session, env, scope="global", GlobalNet=None, lr=2e-4, decay=0.99, eps=1e-6,
                  value_w=0.25, entropy_w=0.01, network_type="cnn"):
         self.sess = session
         self.action_n = env.action_space.n

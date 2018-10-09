@@ -19,72 +19,144 @@
 
 \refsection{0}
   \sortlist{nyt}{nyt}
-    \entry{mnih2015atari}{article}{}
-      \name{labelname}{19}{}{%
-        {{uniquename=0,hash=f7d23cfe4ca0e6bf7a8c251bfa78aca6}{Mnih}{M\bibinitperiod}{Volodymyr}{V\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=481308b301166b521c74fde6566e97e6}{Kavukcuoglu}{K\bibinitperiod}{Koray}{K\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=89dbd30410c2085cd059f32c57d4593e}{Silver}{S\bibinitperiod}{David}{D\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=6c4f5fb067e8e13379430f0331730a93}{Rusu}{R\bibinitperiod}{Andrei\bibnamedelima A.}{A\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=1cbd91f7404b2298b46bb46c47c08251}{Veness}{V\bibinitperiod}{Joel}{J\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=cc3634250c84939cbfabdf623e17d51e}{Bellemare}{B\bibinitperiod}{Marc\bibnamedelima G.}{M\bibinitperiod\bibinitdelim G\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=dfca94b0427da7f9088af596e23b46c0}{Graves}{G\bibinitperiod}{Alex}{A\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=9449802bcb467309c0ebced658096818}{Riedmiller}{R\bibinitperiod}{Martin}{M\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=17c7c44c9969181de3e12eb87600ae04}{Fidjeland}{F\bibinitperiod}{Andreas\bibnamedelima K.}{A\bibinitperiod\bibinitdelim K\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=46cc21fb5dec973c05ceb0f321e02ca0}{Ostrovski}{O\bibinitperiod}{Georg}{G\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=4e381e44037009b1cd834d794735c311}{Petersen}{P\bibinitperiod}{Stig}{S\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=03cf4f0976cc27112d267a8916a2d169}{Beattie}{B\bibinitperiod}{Charles}{C\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=b827d5121d467eeb30ccac8c61094591}{Sadik}{S\bibinitperiod}{Amir}{A\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=af540e84ef1ecdaa70b1f7c90f59fd7d}{Antonoglou}{A\bibinitperiod}{Ioannis}{I\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=59998a15386f62e4d2776176ab58d49c}{King}{K\bibinitperiod}{Helen}{H\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=a425c81c03d315597e3f92690763e24d}{Kumaran}{K\bibinitperiod}{Dharshan}{D\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=d7805381550fb5f8360345f7f72c0b49}{Wierstra}{W\bibinitperiod}{Daan}{D\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=afdf5ed50a24cdca0f42433e4f4848d5}{Legg}{L\bibinitperiod}{Shane}{S\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=b160026950ebb1e2286dfb40c15482f5}{Hassabis}{H\bibinitperiod}{Demis}{D\bibinitperiod}{}{}{}{}}%
+    \entry{openaigym}{article}{}
+      \name{labelname}{7}{}{%
+        {{uniquename=0,hash=7ae2a0efeaf9c031f9b420bcb1c19e54}{Brockman}{B\bibinitperiod}{Greg}{G\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=ece7baf9b320c51ead8e24c1c6386dbf}{Cheung}{C\bibinitperiod}{Vicki}{V\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=1c9e26679bbf72679894fbc2d3a86eb1}{Pettersson}{P\bibinitperiod}{Ludwig}{L\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=5167ef9d0b77bf68557730648baac9b7}{Schneider}{S\bibinitperiod}{Jonas}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=3e09bd2a25d237ebdaed560a07c0451e}{Schulman}{S\bibinitperiod}{John}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=d0b3008e85b1a8b38f46556abf1791c7}{Tang}{T\bibinitperiod}{Jie}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=e9fec85bbce1b087a6ebefe26e73f7bf}{Zaremba}{Z\bibinitperiod}{Wojciech}{W\bibinitperiod}{}{}{}{}}%
       }
-      \name{author}{19}{}{%
-        {{uniquename=0,hash=f7d23cfe4ca0e6bf7a8c251bfa78aca6}{Mnih}{M\bibinitperiod}{Volodymyr}{V\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=481308b301166b521c74fde6566e97e6}{Kavukcuoglu}{K\bibinitperiod}{Koray}{K\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=89dbd30410c2085cd059f32c57d4593e}{Silver}{S\bibinitperiod}{David}{D\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=6c4f5fb067e8e13379430f0331730a93}{Rusu}{R\bibinitperiod}{Andrei\bibnamedelima A.}{A\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=1cbd91f7404b2298b46bb46c47c08251}{Veness}{V\bibinitperiod}{Joel}{J\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=cc3634250c84939cbfabdf623e17d51e}{Bellemare}{B\bibinitperiod}{Marc\bibnamedelima G.}{M\bibinitperiod\bibinitdelim G\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=dfca94b0427da7f9088af596e23b46c0}{Graves}{G\bibinitperiod}{Alex}{A\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=9449802bcb467309c0ebced658096818}{Riedmiller}{R\bibinitperiod}{Martin}{M\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=17c7c44c9969181de3e12eb87600ae04}{Fidjeland}{F\bibinitperiod}{Andreas\bibnamedelima K.}{A\bibinitperiod\bibinitdelim K\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=46cc21fb5dec973c05ceb0f321e02ca0}{Ostrovski}{O\bibinitperiod}{Georg}{G\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=4e381e44037009b1cd834d794735c311}{Petersen}{P\bibinitperiod}{Stig}{S\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=03cf4f0976cc27112d267a8916a2d169}{Beattie}{B\bibinitperiod}{Charles}{C\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=b827d5121d467eeb30ccac8c61094591}{Sadik}{S\bibinitperiod}{Amir}{A\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=af540e84ef1ecdaa70b1f7c90f59fd7d}{Antonoglou}{A\bibinitperiod}{Ioannis}{I\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=59998a15386f62e4d2776176ab58d49c}{King}{K\bibinitperiod}{Helen}{H\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=a425c81c03d315597e3f92690763e24d}{Kumaran}{K\bibinitperiod}{Dharshan}{D\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=d7805381550fb5f8360345f7f72c0b49}{Wierstra}{W\bibinitperiod}{Daan}{D\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=afdf5ed50a24cdca0f42433e4f4848d5}{Legg}{L\bibinitperiod}{Shane}{S\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=b160026950ebb1e2286dfb40c15482f5}{Hassabis}{H\bibinitperiod}{Demis}{D\bibinitperiod}{}{}{}{}}%
+      \name{author}{7}{}{%
+        {{uniquename=0,hash=7ae2a0efeaf9c031f9b420bcb1c19e54}{Brockman}{B\bibinitperiod}{Greg}{G\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=ece7baf9b320c51ead8e24c1c6386dbf}{Cheung}{C\bibinitperiod}{Vicki}{V\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=1c9e26679bbf72679894fbc2d3a86eb1}{Pettersson}{P\bibinitperiod}{Ludwig}{L\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=5167ef9d0b77bf68557730648baac9b7}{Schneider}{S\bibinitperiod}{Jonas}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=3e09bd2a25d237ebdaed560a07c0451e}{Schulman}{S\bibinitperiod}{John}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=d0b3008e85b1a8b38f46556abf1791c7}{Tang}{T\bibinitperiod}{Jie}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=e9fec85bbce1b087a6ebefe26e73f7bf}{Zaremba}{Z\bibinitperiod}{Wojciech}{W\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{ce46cc7360f33a11d3532ad41aff3485}
+      \strng{fullhash}{87cdccf072890926f8955924be595134}
+      \field{sortinit}{B}
+      \field{sortinithash}{1a3a21dbed09540af12d49a0b14f4751}
+      \field{labelyear}{2016}
+      \field{datelabelsource}{}
+      \field{labeltitle}{OpenAI Gym}
+      \field{journaltitle}{CoRR}
+      \field{title}{OpenAI Gym}
+      \field{volume}{abs/1606.01540}
+      \field{year}{2016}
+    \endentry
+    \entry{Hinton504}{article}{}
+      \name{labelname}{2}{}{%
+        {{uniquename=0,hash=6b9475455390bf75201935e23fe0804d}{Hinton}{H\bibinitperiod}{G.\bibnamedelimi E.}{G\bibinitperiod\bibinitdelim E\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=40bcefc2a7b2d16872b87a8b769bcc43}{Salakhutdinov}{S\bibinitperiod}{R.\bibnamedelimi R.}{R\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=6b9475455390bf75201935e23fe0804d}{Hinton}{H\bibinitperiod}{G.\bibnamedelimi E.}{G\bibinitperiod\bibinitdelim E\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=40bcefc2a7b2d16872b87a8b769bcc43}{Salakhutdinov}{S\bibinitperiod}{R.\bibnamedelimi R.}{R\bibinitperiod\bibinitdelim R\bibinitperiod}{}{}{}{}}%
       }
       \list{publisher}{1}{%
-        {Nature Publishing Group, a division of Macmillan Publishers Limited. All Rights Reserved.}%
+        {American Association for the Advancement of Science}%
+      }
+      \strng{namehash}{ac77ffe4460cdb0adc9bf9a7791e7c97}
+      \strng{fullhash}{ac77ffe4460cdb0adc9bf9a7791e7c97}
+      \field{sortinit}{H}
+      \field{sortinithash}{95b2cb08933fe649b7e9f8beee2132b4}
+      \field{labelyear}{2006}
+      \field{datelabelsource}{}
+      \field{labeltitle}{Reducing the Dimensionality of Data with Neural Networks}
+      \field{abstract}{High-dimensional data can be converted to low-dimensional codes by training a multilayer neural network with a small central layer to reconstruct high-dimensional input vectors. Gradient descent can be used for fine-tuning the weights in such {“}autoencoder{”} networks, but this works well only if the initial weights are close to a good solution. We describe an effective way of initializing the weights that allows deep autoencoder networks to learn low-dimensional codes that work much better than principal components analysis as a tool to reduce the dimensionality of data.}
+      \field{issn}{0036-8075}
+      \field{journaltitle}{Science}
+      \field{number}{5786}
+      \field{title}{Reducing the Dimensionality of Data with Neural Networks}
+      \field{volume}{313}
+      \field{year}{2006}
+      \field{pages}{504\bibrangedash 507}
+      \verb{doi}
+      \verb 10.1126/science.1127647
+      \endverb
+      \verb{eprint}
+      \verb http://science.sciencemag.org/content/313/5786/504.full.pdf
+      \endverb
+      \verb{url}
+      \verb http://science.sciencemag.org/content/313/5786/504
+      \endverb
+    \endentry
+    \entry{A3C}{article}{}
+      \name{labelname}{8}{}{%
+        {{uniquename=0,hash=f7d23cfe4ca0e6bf7a8c251bfa78aca6}{Mnih}{M\bibinitperiod}{Volodymyr}{V\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=576fefca19ba1457b4d3610010544074}{Badia}{B\bibinitperiod}{Adri{à}\bibnamedelima Puigdom{è}nech}{A\bibinitperiod\bibinitdelim P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=9e80f4779b032f68a6106e1424345450}{Mirza}{M\bibinitperiod}{Mehdi}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=dfca94b0427da7f9088af596e23b46c0}{Graves}{G\bibinitperiod}{Alex}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=2e52abe1ebb8cb0b74c78afc7eaa3d4d}{Lillicrap}{L\bibinitperiod}{Timothy\bibnamedelima P.}{T\bibinitperiod\bibinitdelim P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=b63b9b2d91f6ba1b1739563edc0432ab}{Harley}{H\bibinitperiod}{Tim}{T\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=89dbd30410c2085cd059f32c57d4593e}{Silver}{S\bibinitperiod}{David}{D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=481308b301166b521c74fde6566e97e6}{Kavukcuoglu}{K\bibinitperiod}{Koray}{K\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{8}{}{%
+        {{uniquename=0,hash=f7d23cfe4ca0e6bf7a8c251bfa78aca6}{Mnih}{M\bibinitperiod}{Volodymyr}{V\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=576fefca19ba1457b4d3610010544074}{Badia}{B\bibinitperiod}{Adri{à}\bibnamedelima Puigdom{è}nech}{A\bibinitperiod\bibinitdelim P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=9e80f4779b032f68a6106e1424345450}{Mirza}{M\bibinitperiod}{Mehdi}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=dfca94b0427da7f9088af596e23b46c0}{Graves}{G\bibinitperiod}{Alex}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=2e52abe1ebb8cb0b74c78afc7eaa3d4d}{Lillicrap}{L\bibinitperiod}{Timothy\bibnamedelima P.}{T\bibinitperiod\bibinitdelim P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=b63b9b2d91f6ba1b1739563edc0432ab}{Harley}{H\bibinitperiod}{Tim}{T\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=89dbd30410c2085cd059f32c57d4593e}{Silver}{S\bibinitperiod}{David}{D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=481308b301166b521c74fde6566e97e6}{Kavukcuoglu}{K\bibinitperiod}{Koray}{K\bibinitperiod}{}{}{}{}}%
       }
       \strng{namehash}{aff24b211b34cdd515b2fd148ce0c920}
-      \strng{fullhash}{5079c80ced9c57aaf6711553b1fcc6af}
+      \strng{fullhash}{678a7a982c622e1b11208b0d3b892b1f}
       \field{sortinit}{M}
       \field{sortinithash}{4203d16473bc940d4ac780773cb7c5dd}
-      \field{labelyear}{2015}
-      \field{labelmonth}{02}
+      \field{labelyear}{2016}
       \field{datelabelsource}{}
-      \field{labeltitle}{Human-level control through deep reinforcement learning}
-      \field{issn}{00280836}
-      \field{journaltitle}{Nature}
-      \field{month}{02}
-      \field{number}{7540}
-      \field{title}{Human-level control through deep reinforcement learning}
-      \field{volume}{518}
-      \field{year}{2015}
-      \field{pages}{529\bibrangedash 533}
-      \verb{url}
-      \verb http://dx.doi.org/10.1038/nature14236
+      \field{labeltitle}{Asynchronous Methods for Deep Reinforcement Learning}
+      \field{journaltitle}{CoRR}
+      \field{title}{Asynchronous Methods for Deep Reinforcement Learning}
+      \field{volume}{abs/1602.01783}
+      \field{year}{2016}
+    \endentry
+    \entry{mnih2015atari}{article}{}
+      \name{labelname}{7}{}{%
+        {{uniquename=0,hash=f7d23cfe4ca0e6bf7a8c251bfa78aca6}{Mnih}{M\bibinitperiod}{Volodymyr}{V\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=481308b301166b521c74fde6566e97e6}{Kavukcuoglu}{K\bibinitperiod}{Koray}{K\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=89dbd30410c2085cd059f32c57d4593e}{Silver}{S\bibinitperiod}{David}{D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=dfca94b0427da7f9088af596e23b46c0}{Graves}{G\bibinitperiod}{Alex}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=af540e84ef1ecdaa70b1f7c90f59fd7d}{Antonoglou}{A\bibinitperiod}{Ioannis}{I\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=d7805381550fb5f8360345f7f72c0b49}{Wierstra}{W\bibinitperiod}{Daan}{D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=441c4d54d1985a0e56a9c0716fc39927}{Riedmiller}{R\bibinitperiod}{Martin\bibnamedelima A.}{M\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{7}{}{%
+        {{uniquename=0,hash=f7d23cfe4ca0e6bf7a8c251bfa78aca6}{Mnih}{M\bibinitperiod}{Volodymyr}{V\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=481308b301166b521c74fde6566e97e6}{Kavukcuoglu}{K\bibinitperiod}{Koray}{K\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=89dbd30410c2085cd059f32c57d4593e}{Silver}{S\bibinitperiod}{David}{D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=dfca94b0427da7f9088af596e23b46c0}{Graves}{G\bibinitperiod}{Alex}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=af540e84ef1ecdaa70b1f7c90f59fd7d}{Antonoglou}{A\bibinitperiod}{Ioannis}{I\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=d7805381550fb5f8360345f7f72c0b49}{Wierstra}{W\bibinitperiod}{Daan}{D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=441c4d54d1985a0e56a9c0716fc39927}{Riedmiller}{R\bibinitperiod}{Martin\bibnamedelima A.}{M\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{aff24b211b34cdd515b2fd148ce0c920}
+      \strng{fullhash}{5eedcc100cfc86abf7753c0fb45cc841}
+      \field{sortinit}{M}
+      \field{sortinithash}{4203d16473bc940d4ac780773cb7c5dd}
+      \field{labelyear}{2013}
+      \field{datelabelsource}{}
+      \field{labeltitle}{Playing Atari with Deep Reinforcement Learning}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{Playing Atari with Deep Reinforcement Learning}
+      \field{volume}{abs/1312.5602}
+      \field{year}{2013}
+      \verb{eprint}
+      \verb 1312.5602
       \endverb
-      \keyw{deep learning toread}
+      \verb{url}
+      \verb http://arxiv.org/abs/1312.5602
+      \endverb
     \endentry
     \entry{OpenAI_dota}{misc}{}
       \name{labelname}{1}{}{%
@@ -197,7 +269,7 @@
         {{uniquename=0,hash=b160026950ebb1e2286dfb40c15482f5}{Hassabis}{H\bibinitperiod}{Demis}{D\bibinitperiod}{}{}{}{}}%
       }
       \list{publisher}{1}{%
-        {Macmillan Publishers Limited, part of Springer Nature. All rights reserved.}%
+        {Macmillan Publishers Limited, part of Springer Nature. All rights reserved. SN -}%
       }
       \strng{namehash}{4ccacac34637df06f749428b6ec5052e}
       \strng{fullhash}{dab5e9876a7b02c64a2f28d97b30b5d4}
@@ -210,14 +282,40 @@
       \field{labeltitle}{Mastering the game of Go without human knowledge}
       \field{journaltitle}{Nature}
       \field{month}{10}
+      \field{note}{Article}
       \field{title}{Mastering the game of Go without human knowledge}
       \field{volume}{550}
       \field{year}{2017}
-      \field{pages}{354\bibrangedash}
       \verb{url}
       \verb http://dx.doi.org/10.1038/nature24270
       \endverb
-      \keyw{2017 deep-learning deepmind google paper reinforcement-learning}
+    \endentry
+    \entry{Sut98}{book}{}
+      \name{labelname}{2}{}{%
+        {{uniquename=0,hash=62d786126ac8e0c074a227e1a9539778}{Sutton}{S\bibinitperiod}{Richard\bibnamedelima S.}{R\bibinitperiod\bibinitdelim S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=2af6784730658c8f4cdaa0f6e798041d}{Barto}{B\bibinitperiod}{Andrew\bibnamedelima G.}{A\bibinitperiod\bibinitdelim G\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=62d786126ac8e0c074a227e1a9539778}{Sutton}{S\bibinitperiod}{Richard\bibnamedelima S.}{R\bibinitperiod\bibinitdelim S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=2af6784730658c8f4cdaa0f6e798041d}{Barto}{B\bibinitperiod}{Andrew\bibnamedelima G.}{A\bibinitperiod\bibinitdelim G\bibinitperiod}{}{}{}{}}%
+      }
+      \list{location}{1}{%
+        {Cambridge, MA, USA}%
+      }
+      \list{publisher}{1}{%
+        {MIT Press}%
+      }
+      \strng{namehash}{28d99d89e7d01c7b5ad82e228ca789fd}
+      \strng{fullhash}{28d99d89e7d01c7b5ad82e228ca789fd}
+      \field{sortinit}{S}
+      \field{sortinithash}{4125bb4c3a0eb3eaee3ea6da32eb70c8}
+      \field{labelyear}{1998}
+      \field{datelabelsource}{}
+      \field{labeltitle}{Introduction to Reinforcement Learning}
+      \field{edition}{1st}
+      \field{isbn}{0262193981}
+      \field{title}{Introduction to Reinforcement Learning}
+      \field{year}{1998}
     \endentry
     \entry{ACER}{article}{}
       \name{labelname}{7}{}{%

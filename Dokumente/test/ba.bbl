@@ -50,6 +50,29 @@
       \field{volume}{abs/1606.01540}
       \field{year}{2016}
     \endentry
+    \entry{Degris12}{article}{}
+      \name{labelname}{3}{}{%
+        {{uniquename=0,hash=6598b6ed3c197bb4292561d14d01436f}{Degris}{D\bibinitperiod}{Thomas}{T\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=a25db29c9968a07dda336d0bb03de3da}{White}{W\bibinitperiod}{Martha}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=62d786126ac8e0c074a227e1a9539778}{Sutton}{S\bibinitperiod}{Richard\bibnamedelima S.}{R\bibinitperiod\bibinitdelim S\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=6598b6ed3c197bb4292561d14d01436f}{Degris}{D\bibinitperiod}{Thomas}{T\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=a25db29c9968a07dda336d0bb03de3da}{White}{W\bibinitperiod}{Martha}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=62d786126ac8e0c074a227e1a9539778}{Sutton}{S\bibinitperiod}{Richard\bibnamedelima S.}{R\bibinitperiod\bibinitdelim S\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{f4ec274724d5d175433146549f470eaa}
+      \strng{fullhash}{a38120015008fa8edd8f29cdade8aea6}
+      \field{sortinit}{D}
+      \field{sortinithash}{a01c54d1737685bc6dbf0ea0673fa44c}
+      \field{labelyear}{2012}
+      \field{datelabelsource}{}
+      \field{labeltitle}{Off-Policy Actor-Critic}
+      \field{journaltitle}{CoRR}
+      \field{title}{Off-Policy Actor-Critic}
+      \field{volume}{abs/1205.4839}
+      \field{year}{2012}
+    \endentry
     \entry{Grondman12}{article}{}
       \name{labelname}{4}{}{%
         {{uniquename=0,hash=595948a95d40ded71062097d83f6f9e6}{Grondman}{G\bibinitperiod}{Ivo}{I\bibinitperiod}{}{}{}{}}%
@@ -219,6 +242,31 @@
       \verb http://arxiv.org/abs/1312.5602
       \endverb
     \endentry
+    \entry{Munos16}{article}{}
+      \name{labelname}{4}{}{%
+        {{uniquename=0,hash=306b811d0d5f3d4ec8d24c5458cd8268}{Munos}{M\bibinitperiod}{R{é}mi}{R\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=673de82ed1465305a14b589f21a23667}{Stepleton}{S\bibinitperiod}{Tom}{T\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=3d3480e603749e7f17bc3e4282421939}{Harutyunyan}{H\bibinitperiod}{Anna}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=cc3634250c84939cbfabdf623e17d51e}{Bellemare}{B\bibinitperiod}{Marc\bibnamedelima G.}{M\bibinitperiod\bibinitdelim G\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{4}{}{%
+        {{uniquename=0,hash=306b811d0d5f3d4ec8d24c5458cd8268}{Munos}{M\bibinitperiod}{R{é}mi}{R\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=673de82ed1465305a14b589f21a23667}{Stepleton}{S\bibinitperiod}{Tom}{T\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=3d3480e603749e7f17bc3e4282421939}{Harutyunyan}{H\bibinitperiod}{Anna}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=cc3634250c84939cbfabdf623e17d51e}{Bellemare}{B\bibinitperiod}{Marc\bibnamedelima G.}{M\bibinitperiod\bibinitdelim G\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{2860e1e9a9dd6d15186e73026eafd786}
+      \strng{fullhash}{840a11ed34c1deb5d57847c8c5445bb5}
+      \field{sortinit}{M}
+      \field{sortinithash}{4203d16473bc940d4ac780773cb7c5dd}
+      \field{labelyear}{2016}
+      \field{datelabelsource}{}
+      \field{labeltitle}{Safe and Efficient Off-Policy Reinforcement Learning}
+      \field{journaltitle}{CoRR}
+      \field{title}{Safe and Efficient Off-Policy Reinforcement Learning}
+      \field{volume}{abs/1606.02647}
+      \field{year}{2016}
+    \endentry
     \entry{OpenAI_dota}{misc}{}
       \name{labelname}{1}{}{%
         {{uniquename=0,hash=0523b13262b12c215d8009938f5c14f1}{OpenAI}{O\bibinitperiod}{}{}{}{}{}{}}%
@@ -237,6 +285,40 @@
       \field{year}{2018}
       \verb{url}
       \verb https://blog.openai.com/openai-five
+      \endverb
+    \endentry
+    \entry{Precup00}{article}{}
+      \name{labelname}{3}{}{%
+        {{uniquename=0,hash=4428b76e1301b2db58587fb18bb59a38}{Precup}{P\bibinitperiod}{Doina}{D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=62d786126ac8e0c074a227e1a9539778}{Sutton}{S\bibinitperiod}{Richard\bibnamedelima S.}{R\bibinitperiod\bibinitdelim S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=9167f1c62d8d8048f6ff8cadea8d5cea}{Singh}{S\bibinitperiod}{Satinder\bibnamedelima P.}{S\bibinitperiod\bibinitdelim P\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=4428b76e1301b2db58587fb18bb59a38}{Precup}{P\bibinitperiod}{Doina}{D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=62d786126ac8e0c074a227e1a9539778}{Sutton}{S\bibinitperiod}{Richard\bibnamedelima S.}{R\bibinitperiod\bibinitdelim S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=9167f1c62d8d8048f6ff8cadea8d5cea}{Singh}{S\bibinitperiod}{Satinder\bibnamedelima P.}{S\bibinitperiod\bibinitdelim P\bibinitperiod}{}{}{}{}}%
+      }
+      \list{location}{1}{%
+        {San Francisco, CA, USA}%
+      }
+      \list{publisher}{1}{%
+        {Morgan Kaufmann Publishers Inc.}%
+      }
+      \strng{namehash}{1e933ffcca9c87eac49a09ea0da5c5a6}
+      \strng{fullhash}{ccc23d8dc75a276b2d252c639ef11583}
+      \field{sortinit}{P}
+      \field{sortinithash}{b8af9282ac256b81613dc9012a0ac921}
+      \field{labelyear}{2000}
+      \field{datelabelsource}{}
+      \field{labeltitle}{Eligibility Traces for Off-Policy Policy Evaluation}
+      \field{booktitle}{Proceedings of the Seventeenth International Conference on Machine Learning}
+      \field{isbn}{1-55860-707-2}
+      \field{series}{ICML '00}
+      \field{title}{Eligibility Traces for Off-Policy Policy Evaluation}
+      \field{year}{2000}
+      \field{pages}{759\bibrangedash 766}
+      \verb{url}
+      \verb http://dl.acm.org/citation.cfm?id=645529.658134
       \endverb
     \endentry
     \entry{Shogi17}{article}{}

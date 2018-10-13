@@ -18,12 +18,20 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.3}Actor-Only Methods}{5}{subsection.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4}Actor-Critic Methods}{5}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.4}Actor-Critic Methods}{6}{subsection.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5}Asynchronous Advantage Actor Critic (A3C)}{6}{subsection.3.5}
+\contentsline {subsection}{\numberline {3.5}Asynchronous Advantage Actor Critic (A3C)}{7}{subsection.3.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{References}{7}{section*.4}
+\contentsline {section}{\numberline {4}Off-Policy Learning}{8}{section.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{List of Figures}{8}{section*.5}
+\contentsline {subsection}{\numberline {4.1}Importance Sampling (IS)}{8}{subsection.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{List of Tables}{8}{section*.6}
+\contentsline {subsection}{\numberline {4.2}Tree-backup, TB(\lambda )}{8}{subsection.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3}Retrace($\lambda $)}{9}{subsection.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{References}{10}{section*.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{List of Figures}{11}{section*.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{List of Tables}{11}{section*.6}

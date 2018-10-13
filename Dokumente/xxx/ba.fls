@@ -131,10 +131,10 @@ INPUT ba.out
 INPUT ba.out
 INPUT ba.out
 INPUT ba.out
+OUTPUT ba.pdf
 INPUT ./ba.out
 INPUT ./ba.out
 OUTPUT ba.out
-OUTPUT ba.pdf
 OUTPUT ba.bcf
 INPUT ba.bbl
 INPUT ba.bbl
@@ -175,10 +175,13 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
 INPUT zusammenfassung.tex
 INPUT zusammenfassung.tex
 INPUT ba.toc
+INPUT ba.toc
 OUTPUT ba.toc
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplro8t.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/palatino/pplro8t.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplro8r.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/palatino/pplb8t.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
 INPUT einleitung.tex
 INPUT einleitung.tex
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplri8t.tfm
@@ -191,8 +194,6 @@ INPUT ./bilder/RLFramework.png
 INPUT ./bilder/RLFramework.png
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplr8t.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplb8t.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/palatino/pplb8t.vf
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/palatino/pplb8t.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplb8r.tfm
 INPUT actorcritic.tex
@@ -221,7 +222,9 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/courier/pcrr8t.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/courier/pcrr8t.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm
 INPUT ba.lof
+INPUT ba.lof
 OUTPUT ba.lof
+INPUT ba.lot
 INPUT ba.lot
 OUTPUT ba.lot
 INPUT ba.aux

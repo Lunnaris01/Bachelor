@@ -1982,11 +1982,18 @@
     <bcf:citekey order="12">deeprlLi</bcf:citekey>
     <bcf:citekey order="13">Sut98</bcf:citekey>
     <bcf:citekey order="14">Sut98</bcf:citekey>
-    <bcf:citekey order="15">Williams1992</bcf:citekey>
-    <bcf:citekey order="16">Sutton00policygradient</bcf:citekey>
-    <bcf:citekey order="17">Grondman12</bcf:citekey>
-    <bcf:citekey order="18">A3C</bcf:citekey>
-    <bcf:citekey order="19">mnih2015atari</bcf:citekey>
+    <bcf:citekey order="15">Sut98</bcf:citekey>
+    <bcf:citekey order="16">Williams1992</bcf:citekey>
+    <bcf:citekey order="17">Sutton00policygradient</bcf:citekey>
+    <bcf:citekey order="18">Grondman12</bcf:citekey>
+    <bcf:citekey order="19">A3C</bcf:citekey>
+    <bcf:citekey order="20">mnih2015atari</bcf:citekey>
+    <bcf:citekey order="21">Degris12</bcf:citekey>
+    <bcf:citekey order="22">Munos16</bcf:citekey>
+    <bcf:citekey order="23">Munos16</bcf:citekey>
+    <bcf:citekey order="24">Precup00</bcf:citekey>
+    <bcf:citekey order="25">Munos16</bcf:citekey>
+    <bcf:citekey order="26">Munos16</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="nyt" type="entry" sortscheme="nyt">
   <bcf:sorting>

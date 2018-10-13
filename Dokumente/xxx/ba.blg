@@ -1,0 +1,15 @@
+[0] Config.pm:321> INFO - This is Biber 1.9
+[0] Config.pm:324> INFO - Logfile is 'ba.blg'
+[42] biber:277> INFO - === Fr Okt 12, 2018, 20:32:00
+[42] Biber.pm:334> INFO - Reading 'ba.bcf'
+[113] Biber.pm:636> INFO - Found 13 citekeys in bib section 0
+[129] Biber.pm:3052> INFO - Processing section 0
+[149] Biber.pm:3190> INFO - Looking for bibtex format file 'references.bib' for section 0
+[151] bibtex.pm:979> INFO - Decoding LaTeX character macros into UTF-8
+[154] bibtex.pm:853> INFO - Found BibTeX data source 'references.bib'
+[361] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[361] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[361] Biber.pm:2929> INFO - Sorting list 'nyt' of type 'entry' with scheme 'nyt' and locale 'en-US'
+[361] Biber.pm:2933> INFO - No sort tailoring available for locale 'en-US'
+[409] bbl.pm:517> INFO - Writing 'ba.bbl' with encoding 'UTF-8'
+[421] bbl.pm:606> INFO - Output to ba.bbl

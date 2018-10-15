@@ -14,7 +14,7 @@ class Worker(object):
         self.memory = ReplayBuffer(2500)
         self.RETURN_STEPS = k_steps
         self.DISCOUNT = DISCOUNT
-        self.MAX_STEPS = step_limit
+        self.MAX_STEPS = step_limit+step_limit*offline_steps
         self.offline_steps = offline_steps
 
     def work_acer(self):
@@ -23,7 +23,7 @@ class Worker(object):
         step = 0
         print(self.name, " using ", self.offline_steps, " per online step")
 
-        while self.memory.counter < self.MAX_STEPS:
+        while step < self.MAX_STEPS:
             self.agent.update_target()
             b_states, b_actions, b_rewards, b_mus, done = rollout(self.agent, self.env, [b_states[-1]], done, self.RETURN_STEPS)
             pi, q_a, val = self.agent.get_retrace_values(b_states[:-1], b_actions)
@@ -57,7 +57,7 @@ class Worker(object):
         evalrewards= []
         summary_writer = tf.summary.FileWriter(TB_DIR + "/tb", self.sess.graph, flush_secs=30)
 
-        while self.memory.counter < self.MAX_STEPS:
+        while step < self.MAX_STEPS:
             self.agent.update_target()
             b_states, b_actions, b_rewards, b_mus, done = rollout(self.agent, self.env, [b_states[-1]], done,
                                                                   self.RETURN_STEPS)

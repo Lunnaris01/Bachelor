@@ -1,0 +1,24 @@
+\section{Actor-Critic with Experience Replay (ACER)}
+\raggedbottom 
+
+"Actor critic with experience replay" (ACER) introduced by \citet{ACER} was one of the first approaches to create a sample efficient, yet stable actor critic method, that applies to both contiuous and discrete action spaces.
+
+ACER combines recent breakthroughs in the field of RL, by utilizing both the ressource efficient parallel training of RL agents proposed by \citet{A3C} and the Retrace algorithm \citep{Munos16}.
+
+These approaches were combined with truncated importance sampling with bias correction and an efficient trust region policy optimization.
+For continuous action spaces, stochastic dueling network architectures were used.
+
+Acer can be viewed as an off-policy extension of A3C \citep{A3C}.
+
+The importance weighted policy gradient is given by:
+\begin{align}
+\hat{g}^{imp} = \left(\prod^k_{t=0}p_t\right) \sum^k_{t=0}\left(\sum^k_{i=0}\gamma^ir_{t+i}\right) \nabla_\theta \ log \ \pi (a_t \mid x_t)
+\end{align}
+
+The unbounded importance weights can cause massive variance. \citet{Degris12} approached this problem by approximating the policy gradient as
+
+\begin{align}
+g^{marg} = E_{x_{t \textasciitilde{}} \beta, a_{t \textasciitilde{}} \mu} \left[p_t \nabla_\theta log \pi_\theta(a_t \mid x_t) Q^\pi (x_t,a_t) \left]
+\end{align}
+
+addition

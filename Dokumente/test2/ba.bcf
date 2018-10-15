@@ -1956,4 +1956,78 @@
         <bcf:field>eventdate</bcf:field>
         <bcf:field>origdate</bcf:field>
         <bcf:field>urldate</bcf:field>
-      </bcf:constraint
+      </bcf:constraint>
+      <bcf:constraint type="data" datatype="pattern" pattern="(?:sf|sm|sn|pf|pm|pn|pp)">
+        <bcf:field>gender</bcf:field>
+      </bcf:constraint>
+    </bcf:constraints>
+  </bcf:datamodel>
+  <!-- CITATION DATA -->
+  <!-- SECTION 0 -->
+  <bcf:bibdata section="0">
+    <bcf:datasource type="file" datatype="bibtex">references.bib</bcf:datasource>
+  </bcf:bibdata>
+  <bcf:section number="0">
+    <bcf:citekey order="1">mnih2015atari</bcf:citekey>
+    <bcf:citekey order="2">Shogi17</bcf:citekey>
+    <bcf:citekey order="3">Go2017</bcf:citekey>
+    <bcf:citekey order="4">OpenAI_dota</bcf:citekey>
+    <bcf:citekey order="5">ACER</bcf:citekey>
+    <bcf:citekey order="6">Sut98</bcf:citekey>
+    <bcf:citekey order="7">openaigym</bcf:citekey>
+    <bcf:citekey order="8">Hinton504</bcf:citekey>
+    <bcf:citekey order="9">ACER</bcf:citekey>
+    <bcf:citekey order="10">A3C</bcf:citekey>
+    <bcf:citekey order="11">Sut98</bcf:citekey>
+    <bcf:citekey order="12">deeprlLi</bcf:citekey>
+    <bcf:citekey order="13">Sut98</bcf:citekey>
+    <bcf:citekey order="14">Sut98</bcf:citekey>
+    <bcf:citekey order="15">Sut98</bcf:citekey>
+    <bcf:citekey order="16">Williams1992</bcf:citekey>
+    <bcf:citekey order="17">Sutton00policygradient</bcf:citekey>
+    <bcf:citekey order="18">Grondman12</bcf:citekey>
+    <bcf:citekey order="19">A3C</bcf:citekey>
+    <bcf:citekey order="20">mnih2015atari</bcf:citekey>
+    <bcf:citekey order="21">Degris12</bcf:citekey>
+    <bcf:citekey order="22">Munos16</bcf:citekey>
+    <bcf:citekey order="23">Munos16</bcf:citekey>
+    <bcf:citekey order="24">Precup00</bcf:citekey>
+    <bcf:citekey order="25">Munos16</bcf:citekey>
+    <bcf:citekey order="26">Munos16</bcf:citekey>
+    <bcf:citekey order="27">ACER</bcf:citekey>
+    <bcf:citekey order="28">A3C</bcf:citekey>
+    <bcf:citekey order="29">Munos16</bcf:citekey>
+    <bcf:citekey order="30">A3C</bcf:citekey>
+    <bcf:citekey order="31">Degris12</bcf:citekey>
+  </bcf:section>
+  <bcf:sortlist section="0" name="nyt" type="entry" sortscheme="nyt">
+  <bcf:sorting>
+    <bcf:sort order="1">
+      <bcf:sortitem order="1">presort</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="2" final="1">
+      <bcf:sortitem order="1">sortkey</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="3">
+      <bcf:sortitem order="1">sortname</bcf:sortitem>
+      <bcf:sortitem order="2">author</bcf:sortitem>
+      <bcf:sortitem order="3">editor</bcf:sortitem>
+      <bcf:sortitem order="4">translator</bcf:sortitem>
+      <bcf:sortitem order="5">sorttitle</bcf:sortitem>
+      <bcf:sortitem order="6">title</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="4">
+      <bcf:sortitem order="1">sortyear</bcf:sortitem>
+      <bcf:sortitem order="2">year</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="5">
+      <bcf:sortitem order="1">sorttitle</bcf:sortitem>
+      <bcf:sortitem order="2">title</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="6">
+      <bcf:sortitem order="1" pad_side="left" pad_width="4" pad_char="0">volume</bcf:sortitem>
+      <bcf:sortitem order="2">0000</bcf:sortitem>
+    </bcf:sort>
+  </bcf:sorting>
+  </bcf:sortlist>
+</bcf:controlfile>

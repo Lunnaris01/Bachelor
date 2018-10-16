@@ -49,6 +49,12 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/palatino.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/palatino.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/tocbibind/tocbibind.sty
@@ -221,6 +227,9 @@ INPUT ./bilder/qlearning2.png
 INPUT bilder/REINFORCE.png
 INPUT ./bilder/REINFORCE.png
 INPUT ./bilder/REINFORCE.png
+INPUT bilder/actorcritic1.png
+INPUT ./bilder/actorcritic1.png
+INPUT ./bilder/actorcritic1.png
 INPUT bilder/aaac.png
 INPUT ./bilder/aaac.png
 INPUT ./bilder/aaac.png
@@ -234,6 +243,12 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 OUTPUT acer.aux
 INPUT acer.tex
 INPUT acer.tex
+INPUT bilder/atarienv.png
+INPUT ./bilder/atarienv.png
+INPUT ./bilder/atarienv.png
+INPUT bilder/nn2.png
+INPUT ./bilder/nn2.png
+INPUT ./bilder/nn2.png
 INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/courier/pcrr8t.tfm

@@ -242,6 +242,73 @@
       \verb http://arxiv.org/abs/1312.5602
       \endverb
     \endentry
+    \entry{nature}{article}{}
+      \name{labelname}{19}{}{%
+        {{uniquename=0,hash=f7d23cfe4ca0e6bf7a8c251bfa78aca6}{Mnih}{M\bibinitperiod}{Volodymyr}{V\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=481308b301166b521c74fde6566e97e6}{Kavukcuoglu}{K\bibinitperiod}{Koray}{K\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=89dbd30410c2085cd059f32c57d4593e}{Silver}{S\bibinitperiod}{David}{D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=6c4f5fb067e8e13379430f0331730a93}{Rusu}{R\bibinitperiod}{Andrei\bibnamedelima A.}{A\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=1cbd91f7404b2298b46bb46c47c08251}{Veness}{V\bibinitperiod}{Joel}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=cc3634250c84939cbfabdf623e17d51e}{Bellemare}{B\bibinitperiod}{Marc\bibnamedelima G.}{M\bibinitperiod\bibinitdelim G\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=dfca94b0427da7f9088af596e23b46c0}{Graves}{G\bibinitperiod}{Alex}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=9449802bcb467309c0ebced658096818}{Riedmiller}{R\bibinitperiod}{Martin}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=17c7c44c9969181de3e12eb87600ae04}{Fidjeland}{F\bibinitperiod}{Andreas\bibnamedelima K.}{A\bibinitperiod\bibinitdelim K\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=46cc21fb5dec973c05ceb0f321e02ca0}{Ostrovski}{O\bibinitperiod}{Georg}{G\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=4e381e44037009b1cd834d794735c311}{Petersen}{P\bibinitperiod}{Stig}{S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=03cf4f0976cc27112d267a8916a2d169}{Beattie}{B\bibinitperiod}{Charles}{C\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=b827d5121d467eeb30ccac8c61094591}{Sadik}{S\bibinitperiod}{Amir}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=af540e84ef1ecdaa70b1f7c90f59fd7d}{Antonoglou}{A\bibinitperiod}{Ioannis}{I\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=59998a15386f62e4d2776176ab58d49c}{King}{K\bibinitperiod}{Helen}{H\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=a425c81c03d315597e3f92690763e24d}{Kumaran}{K\bibinitperiod}{Dharshan}{D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=d7805381550fb5f8360345f7f72c0b49}{Wierstra}{W\bibinitperiod}{Daan}{D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=afdf5ed50a24cdca0f42433e4f4848d5}{Legg}{L\bibinitperiod}{Shane}{S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=b160026950ebb1e2286dfb40c15482f5}{Hassabis}{H\bibinitperiod}{Demis}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{19}{}{%
+        {{uniquename=0,hash=f7d23cfe4ca0e6bf7a8c251bfa78aca6}{Mnih}{M\bibinitperiod}{Volodymyr}{V\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=481308b301166b521c74fde6566e97e6}{Kavukcuoglu}{K\bibinitperiod}{Koray}{K\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=89dbd30410c2085cd059f32c57d4593e}{Silver}{S\bibinitperiod}{David}{D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=6c4f5fb067e8e13379430f0331730a93}{Rusu}{R\bibinitperiod}{Andrei\bibnamedelima A.}{A\bibinitperiod\bibinitdelim A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=1cbd91f7404b2298b46bb46c47c08251}{Veness}{V\bibinitperiod}{Joel}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=cc3634250c84939cbfabdf623e17d51e}{Bellemare}{B\bibinitperiod}{Marc\bibnamedelima G.}{M\bibinitperiod\bibinitdelim G\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=dfca94b0427da7f9088af596e23b46c0}{Graves}{G\bibinitperiod}{Alex}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=9449802bcb467309c0ebced658096818}{Riedmiller}{R\bibinitperiod}{Martin}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=17c7c44c9969181de3e12eb87600ae04}{Fidjeland}{F\bibinitperiod}{Andreas\bibnamedelima K.}{A\bibinitperiod\bibinitdelim K\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=46cc21fb5dec973c05ceb0f321e02ca0}{Ostrovski}{O\bibinitperiod}{Georg}{G\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=4e381e44037009b1cd834d794735c311}{Petersen}{P\bibinitperiod}{Stig}{S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=03cf4f0976cc27112d267a8916a2d169}{Beattie}{B\bibinitperiod}{Charles}{C\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=b827d5121d467eeb30ccac8c61094591}{Sadik}{S\bibinitperiod}{Amir}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=af540e84ef1ecdaa70b1f7c90f59fd7d}{Antonoglou}{A\bibinitperiod}{Ioannis}{I\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=59998a15386f62e4d2776176ab58d49c}{King}{K\bibinitperiod}{Helen}{H\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=a425c81c03d315597e3f92690763e24d}{Kumaran}{K\bibinitperiod}{Dharshan}{D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=d7805381550fb5f8360345f7f72c0b49}{Wierstra}{W\bibinitperiod}{Daan}{D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=afdf5ed50a24cdca0f42433e4f4848d5}{Legg}{L\bibinitperiod}{Shane}{S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=b160026950ebb1e2286dfb40c15482f5}{Hassabis}{H\bibinitperiod}{Demis}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group, a division of Macmillan Publishers Limited. All Rights Reserved.}%
+      }
+      \strng{namehash}{aff24b211b34cdd515b2fd148ce0c920}
+      \strng{fullhash}{5079c80ced9c57aaf6711553b1fcc6af}
+      \field{sortinit}{M}
+      \field{sortinithash}{4203d16473bc940d4ac780773cb7c5dd}
+      \field{labelyear}{2015}
+      \field{labelmonth}{02}
+      \field{datelabelsource}{}
+      \field{labeltitle}{Human-level control through deep reinforcement learning}
+      \field{issn}{00280836}
+      \field{journaltitle}{Nature}
+      \field{month}{02}
+      \field{number}{7540}
+      \field{title}{Human-level control through deep reinforcement learning}
+      \field{volume}{518}
+      \field{year}{2015}
+      \field{pages}{529\bibrangedash 533}
+      \verb{url}
+      \verb http://dx.doi.org/10.1038/nature14236
+      \endverb
+      \keyw{deep learning toread}
+    \endentry
     \entry{Munos16}{article}{}
       \name{labelname}{4}{}{%
         {{uniquename=0,hash=306b811d0d5f3d4ec8d24c5458cd8268}{Munos}{M\bibinitperiod}{R{é}mi}{R\bibinitperiod}{}{}{}{}}%

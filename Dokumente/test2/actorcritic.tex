@@ -70,7 +70,6 @@ where $\alpha$ denotes the step size.
 
 
 \includegraphics[scale=0.4]{bilder/REINFORCE.png}
-\pagebreak
 
 
 In contrast to value based approaches, policy gradient methods provide strong convergence to at least a local maximum.
@@ -87,8 +86,14 @@ Actor-critic methods tackle the problem of high variance in policy gradient meth
 They combine the strenght of both approaches to achieve a learning agent, which has strong convergence, yet low variance.
 
 Since actor-critic methods are still policy gradient methods at their core, they provide the possibility to work on continuous actions spaces just like the actor-only approach.
+\begin{figure}
+\includegraphics[scale=0.5]{bilder/actorcritic1.png}
+\caption{Actor, Critic, and Actor-Critic approach}
+\end{figure}
 
 \pagebreak
+
+
 
 \subsection{Asynchronous Advantage Actor Critic (A3C)}
 

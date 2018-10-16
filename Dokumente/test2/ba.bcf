@@ -1999,6 +1999,14 @@
     <bcf:citekey order="29">Munos16</bcf:citekey>
     <bcf:citekey order="30">A3C</bcf:citekey>
     <bcf:citekey order="31">Degris12</bcf:citekey>
+    <bcf:citekey order="32">ACER</bcf:citekey>
+    <bcf:citekey order="33">openaigym</bcf:citekey>
+    <bcf:citekey order="34">mnih2015atari</bcf:citekey>
+    <bcf:citekey order="35">nature</bcf:citekey>
+    <bcf:citekey order="36">mnih2015atari</bcf:citekey>
+    <bcf:citekey order="37">nature</bcf:citekey>
+    <bcf:citekey order="38">nature</bcf:citekey>
+    <bcf:citekey order="39">A3C</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="nyt" type="entry" sortscheme="nyt">
   <bcf:sorting>

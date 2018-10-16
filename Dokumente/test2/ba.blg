@@ -1,15 +1,15 @@
-[1] Config.pm:321> INFO - This is Biber 1.9
+[0] Config.pm:321> INFO - This is Biber 1.9
 [1] Config.pm:324> INFO - Logfile is 'ba.blg'
-[38] biber:277> INFO - === Di Okt 16, 2018, 04:49:24
-[38] Biber.pm:334> INFO - Reading 'ba.bcf'
-[109] Biber.pm:636> INFO - Found 17 citekeys in bib section 0
-[125] Biber.pm:3052> INFO - Processing section 0
-[145] Biber.pm:3190> INFO - Looking for bibtex format file 'references.bib' for section 0
-[147] bibtex.pm:979> INFO - Decoding LaTeX character macros into UTF-8
-[150] bibtex.pm:853> INFO - Found BibTeX data source 'references.bib'
-[428] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[428] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[428] Biber.pm:2929> INFO - Sorting list 'nyt' of type 'entry' with scheme 'nyt' and locale 'en-US'
-[428] Biber.pm:2933> INFO - No sort tailoring available for locale 'en-US'
-[498] bbl.pm:517> INFO - Writing 'ba.bbl' with encoding 'UTF-8'
-[501] bbl.pm:606> INFO - Output to ba.bbl
+[47] biber:277> INFO - === Di Okt 16, 2018, 14:10:00
+[47] Biber.pm:334> INFO - Reading 'ba.bcf'
+[142] Biber.pm:636> INFO - Found 17 citekeys in bib section 0
+[165] Biber.pm:3052> INFO - Processing section 0
+[195] Biber.pm:3190> INFO - Looking for bibtex format file 'references.bib' for section 0
+[198] bibtex.pm:979> INFO - Decoding LaTeX character macros into UTF-8
+[202] bibtex.pm:853> INFO - Found BibTeX data source 'references.bib'
+[604] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[604] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[604] Biber.pm:2929> INFO - Sorting list 'nyt' of type 'entry' with scheme 'nyt' and locale 'en-US'
+[604] Biber.pm:2933> INFO - No sort tailoring available for locale 'en-US'
+[690] bbl.pm:517> INFO - Writing 'ba.bbl' with encoding 'UTF-8'
+[695] bbl.pm:606> INFO - Output to ba.bbl

@@ -97,9 +97,29 @@ Even though other activation/transformation functions exist, the ReLU has empiri
 
 A test run using tanh instead of ReLU caused a strong loss of performance.
 
-The final shared layers is followed by a softmax policy($\pi_\theta$) and a mapping to the actionspace($Q^\pi_\theta_v$) for the actor and critic respectively.
+The final shared layers is then mapped to the action space twice to obtain the action scores, and the Q-values. We use a softmax policy to receive the distribution over actions.
+The action is randomly sampled from the softmax probabilities.
+
+\begin{equation}
+P(A = a' | s ) = \frac{e^{z_{a'}}}{\sum^N_{i=0}e^{z_{a_i}}} 
+\end{equation}
+
+where $z_{a}$ denotes the score assigned to the action through the last network layer.
+
 
 \begin{figure}
 \includegraphics[scale=0.5]{bilder/nn2.png}
 \caption{Shared network for policy and Q-Value approximization for an environment with 4 possible actions}
 \end{figure}
+
+The agent is trained by using 16 learner threads running on the CPU. Each Thread has it's own replay buffer, which ensures a more balanced replay and reduces the risk of a single trajectory being used unreasonably often compared to a single shared replay buffer.
+
+Updates to the network were performed every 20 steps or if the environment reached a terminal state. 
+
+Replay buffers were designed to hold up to 2500 trajectories, therefore ~50.000 frames were saved for each thread and $_\tilde{}$ 800.000 frames were stored in total, which is the same size used by DQN \citep{nature}}
+
+If no replay is used, ACER essentially becomes a version of A3C which uses retrace and Q-values, rather than learning the value function. \citep{A3C}
+
+For the offline setting, replay ratios of 1,2 and 4 were considered, where a ratio of 4 would mean, that the net is trained on trajectories sampled from the replay buffer 4 times for every online update.
+
+

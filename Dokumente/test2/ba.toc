@@ -32,16 +32,20 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5}Actor-Critic with Experience Replay (ACER)}{11}{section.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1}Experimental Setup}{12}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.1}Experimental Setup}{13}{subsection.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.1.1}Environment}{12}{subsubsection.5.1.1}
+\contentsline {subsubsection}{\numberline {5.1.1}Environment}{13}{subsubsection.5.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.1.2}Preprocessing}{12}{subsubsection.5.1.2}
+\contentsline {subsubsection}{\numberline {5.1.2}Preprocessing}{13}{subsubsection.5.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.1.3}network architecture}{13}{subsubsection.5.1.3}
+\contentsline {subsubsection}{\numberline {5.1.3}network architecture}{14}{subsubsection.5.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{References}{15}{section*.4}
+\contentsline {section}{\numberline {6}Preprocessing Atari Environments}{16}{section.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{List of Figures}{17}{section*.5}
+\contentsline {section}{\numberline {7}Adversial Attacks}{17}{section.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{List of Tables}{17}{section*.6}
+\contentsline {section}{References}{18}{section*.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{List of Figures}{20}{section*.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{List of Tables}{20}{section*.6}

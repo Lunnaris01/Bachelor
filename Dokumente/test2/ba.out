@@ -15,6 +15,8 @@
 \BOOKMARK [2][-]{subsection.4.3}{Retrace\(\)}{section.4}% 15
 \BOOKMARK [1][-]{section.5}{Actor-Critic with Experience Replay \(ACER\)}{}% 16
 \BOOKMARK [2][-]{subsection.5.1}{Experimental Setup}{section.5}% 17
-\BOOKMARK [1][-]{section*.4}{References}{}% 18
-\BOOKMARK [1][-]{section*.5}{List of Figures}{}% 19
-\BOOKMARK [1][-]{section*.6}{List of Tables}{}% 20
+\BOOKMARK [1][-]{section.6}{Preprocessing Atari Environments}{}% 18
+\BOOKMARK [1][-]{section.7}{Adversial Attacks}{}% 19
+\BOOKMARK [1][-]{section*.4}{References}{}% 20
+\BOOKMARK [1][-]{section*.5}{List of Figures}{}% 21
+\BOOKMARK [1][-]{section*.6}{List of Tables}{}% 22

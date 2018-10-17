@@ -2009,6 +2009,9 @@
     <bcf:citekey order="39">A3C</bcf:citekey>
     <bcf:citekey order="40">nature</bcf:citekey>
     <bcf:citekey order="41">A3C</bcf:citekey>
+    <bcf:citekey order="42">A3C</bcf:citekey>
+    <bcf:citekey order="43">nature</bcf:citekey>
+    <bcf:citekey order="44">karpathy</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="nyt" type="entry" sortscheme="nyt">
   <bcf:sorting>

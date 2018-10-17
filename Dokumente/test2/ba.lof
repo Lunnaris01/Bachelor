@@ -4,6 +4,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {2}{\ignorespaces Actor, Critic, and Actor-Critic approach}}{7}{figure.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3}{\ignorespaces The Atari 2600 console games Breakout, SpaceInvaders, Riverraid and Seaquest before and after being processed.}}{13}{figure.3}
+\contentsline {figure}{\numberline {3}{\ignorespaces The Atari 2600 console games Breakout, SpaceInvaders, Riverraid and Seaquest before and after being processed.}}{14}{figure.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4}{\ignorespaces Shared network for policy and Q-Value approximization for an environment with 4 possible actions}}{14}{figure.4}
+\contentsline {figure}{\numberline {4}{\ignorespaces Shared network for policy and Q-Value approximization for an environment with 4 possible actions}}{15}{figure.4}

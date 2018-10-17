@@ -152,6 +152,25 @@
       \verb http://science.sciencemag.org/content/313/5786/504
       \endverb
     \endentry
+    \entry{karpathy}{misc}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=e91a4c2044bccdbef249eabc886ff988}{Karpathy}{K\bibinitperiod}{Andrej}{A\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=e91a4c2044bccdbef249eabc886ff988}{Karpathy}{K\bibinitperiod}{Andrej}{A\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{e91a4c2044bccdbef249eabc886ff988}
+      \strng{fullhash}{e91a4c2044bccdbef249eabc886ff988}
+      \field{sortinit}{K}
+      \field{sortinithash}{33bf4c961fa093ee6a297ccbd88eacc0}
+      \field{labelyear}{nodate}
+      \field{labeltitle}{Deep Reinforcement Learning: Pong from Pixels}
+      \field{journaltitle}{Deep Reinforcement Learning: Pong from Pixels}
+      \field{title}{Deep Reinforcement Learning: Pong from Pixels}
+      \verb{url}
+      \verb http://karpathy.github.io/2016/05/31/rl/
+      \endverb
+    \endentry
     \entry{deeprlLi}{article}{}
       \name{labelname}{1}{}{%
         {{uniquename=0,hash=ecfc4d691cc8482ff5f23c608c7d26bc}{Li}{L\bibinitperiod}{Yuxi}{Y\bibinitperiod}{}{}{}{}}%

@@ -249,6 +249,9 @@ INPUT ./bilder/atarienv.png
 INPUT bilder/nn2.png
 INPUT ./bilder/nn2.png
 INPUT ./bilder/nn2.png
+INPUT bilder/ACERarchitecture.png
+INPUT ./bilder/ACERarchitecture.png
+INPUT ./bilder/ACERarchitecture.png
 INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/courier/pcrr8t.tfm

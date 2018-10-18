@@ -4,19 +4,23 @@
 \BOOKMARK [2][-]{subsection.2.2}{Markov Decision Process}{section.2}% 4
 \BOOKMARK [2][-]{subsection.2.3}{Deep Reinforcement Learning}{section.2}% 5
 \BOOKMARK [1][-]{section.3}{Actor-Critic Methods}{}% 6
-\BOOKMARK [2][-]{subsection.3.1}{TD-Learning}{section.3}% 7
-\BOOKMARK [2][-]{subsection.3.2}{Critic-Only Methods}{section.3}% 8
-\BOOKMARK [2][-]{subsection.3.3}{Actor-Only Methods}{section.3}% 9
-\BOOKMARK [2][-]{subsection.3.4}{Actor-Critic Methods}{section.3}% 10
-\BOOKMARK [2][-]{subsection.3.5}{Asynchronous Advantage Actor Critic \(A3C\)}{section.3}% 11
-\BOOKMARK [1][-]{section.4}{Off-Policy Learning}{}% 12
-\BOOKMARK [2][-]{subsection.4.1}{Importance Sampling \(IS\)}{section.4}% 13
-\BOOKMARK [2][-]{subsection.4.2}{Tree-backup, TB\(\)}{section.4}% 14
-\BOOKMARK [2][-]{subsection.4.3}{Retrace\(\)}{section.4}% 15
-\BOOKMARK [1][-]{section.5}{Actor-Critic with Experience Replay \(ACER\)}{}% 16
-\BOOKMARK [2][-]{subsection.5.1}{Experimental Setup}{section.5}% 17
-\BOOKMARK [1][-]{section.6}{Preprocessing Atari Environments}{}% 18
-\BOOKMARK [1][-]{section.7}{Adversial Attacks}{}% 19
-\BOOKMARK [1][-]{section*.4}{References}{}% 20
-\BOOKMARK [1][-]{section*.5}{List of Figures}{}% 21
-\BOOKMARK [1][-]{section*.6}{List of Tables}{}% 22
+\BOOKMARK [2][-]{subsection.3.1}{Monte-Carlo Predictions}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.2}{TD-Learning}{section.3}% 8
+\BOOKMARK [2][-]{subsection.3.3}{N-Step TD-Learning}{section.3}% 9
+\BOOKMARK [2][-]{subsection.3.4}{Critic-Only Methods}{section.3}% 10
+\BOOKMARK [2][-]{subsection.3.5}{Actor-Only Methods}{section.3}% 11
+\BOOKMARK [2][-]{subsection.3.6}{Actor-Critic Methods}{section.3}% 12
+\BOOKMARK [2][-]{subsection.3.7}{Asynchronous Advantage Actor Critic \(A3C\)}{section.3}% 13
+\BOOKMARK [1][-]{section.4}{Off-Policy Learning}{}% 14
+\BOOKMARK [2][-]{subsection.4.1}{Importance Sampling \(IS\)}{section.4}% 15
+\BOOKMARK [2][-]{subsection.4.2}{Tree-backup, TB\(\)}{section.4}% 16
+\BOOKMARK [2][-]{subsection.4.3}{Retrace\(\)}{section.4}% 17
+\BOOKMARK [1][-]{section.5}{Actor-Critic with Experience Replay \(ACER\)}{}% 18
+\BOOKMARK [2][-]{subsection.5.1}{Experimental Setup}{section.5}% 19
+\BOOKMARK [2][-]{subsection.5.2}{Hyperparameter settings}{section.5}% 20
+\BOOKMARK [1][-]{section.6}{Results}{}% 21
+\BOOKMARK [1][-]{section.7}{Preprocessing Atari Environments}{}% 22
+\BOOKMARK [1][-]{section.8}{Adversial Attacks}{}% 23
+\BOOKMARK [1][-]{section*.4}{References}{}% 24
+\BOOKMARK [1][-]{section*.5}{List of Figures}{}% 25
+\BOOKMARK [1][-]{section*.6}{List of Tables}{}% 26

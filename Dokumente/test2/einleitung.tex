@@ -4,25 +4,24 @@ Acting optimal within an unknown environment can be very difficult.
 The field within machine learning adressing this problem is called reinforcement learning.
 
 The reinforcement problem consist of an \textit{agent} taking \textit{actions} within some sort of \textit{environment}.
-By interacting with the \textit{environment} the \textit{agent} receives \textit{rewards}.
+By interacting with the \textit{environment} the \textit{agent} tries to find the \textit{actions} which will yield the most \textit{reward} in the future.
 
-The goal of reinforcement learning is to create fast and reliable learning algorithms for the \textit{agent} to gain the maximum \textit{reward}
+The goal of reinforcement learning is to create fast and reliable learning algorithms for the \textit{agent} to take the optimal \textit{actions} withing the \textit{environment}, This simply means, we want to achieve the maximum possible \textit{reward} within an episode or over time if an environment is continuous.
 
-Environments can range from simple tasks, like balancing a pole to very complex and demanding tasks where \textit{environment states} are given as pixels, continuous control problems or real life robotic tasks.
+Environments can pose a range of tasks, with very different difficulty.
+The 'Cartpole'-environment for example requires the agent to simply balance a pole based on 4 input values with only 2 possible actions, whereas more complex and demanding tasks might have high dimensional images as states with many possible actions to choose from.
+
 This thesis will work with the Atari 2600 environments offered by OpenAI \citep{openaigym}
 
-By combining deep learning techniques \citep{Hinton504} with reinforcemen learning, the problems posed by most of the Atari games can easily be solved.
+By combining deep learning techniques \citep{Hinton504} with reinforcement learning, the problems posed by most of the Atari games can be solved nowadays.
 
 However complex environment like the Atari 2600 games can often be costly to simulate.
 
-ACER \citep{ACER} provides a sample efficient learning agent. This work aims at implementing and evaluating the Algorithm
+ACER \citep{ACER} provides a sample efficient learning agent. This work aims at implementing and evaluating the algorithm.
 
-This thesis will provide a short overview for important concepts of reinforcement learning
-
-To lay out the foundation for ACER, policy gradient, specifically Actor-Critic methods and the Advantage Actor Critic(A3C) - Algorithm \citep{A3C} are looked upon, followed by an introduction to some approaches of Off-Policy learning.
+To lay out the foundation for ACER, we will first discuss core components of reinforcement learning and take a closer look at policy gradient methods, specifically actor-critic methods and the \textit{Advantage Actor Critic} (A3C) - algorithm \citep{A3C}, followed by an overview of different approaches to off-policy learning from experience.
 
 Finally the ACER- Algorithm is presented, implemented and evaluated.
-
 
 
 \pagebreak

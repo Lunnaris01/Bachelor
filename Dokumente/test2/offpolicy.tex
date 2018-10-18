@@ -44,7 +44,7 @@ Retrace values for a q funcion are obtained recursively by
 
 \begin{align}
 {
-Q^{ret}(x_t,a_t)=r_t+\gamma \tilde{p}^_{t+1}[Q^{ret}(x_{t+1},a_{t+a} - Q(x_{t+a},a_{t+1})] + \gammaV(x_{t+1})
+Q^{ret}(x_t,a_t)=r_t+\gamma \tilde{p}^_{t+1}[Q^{ret}(x_{t+1},a_{t+a} ) -  Q(x_{t+a},a_{t+1})] + \gamma V(x_{t+1})
 }
 \label{qretrace}
 \end{align}
@@ -52,6 +52,7 @@ Q^{ret}(x_t,a_t)=r_t+\gamma \tilde{p}^_{t+1}[Q^{ret}(x_{t+1},a_{t+a} - Q(x_{t+a}
 with $\tilde{p} = min\{c,p_t\}$ being the truncated importance weight $p_t$ (\ref{IW}).
 
 In case of a terminal state, the retrace value is equal to the final reward.
+Note that the formula is given considering $\lambda = 1$
 
 As $\lambda = 1$ performs the best for the Atari console games \citep{Munos16}, other values were not considered within this Thesis.
 

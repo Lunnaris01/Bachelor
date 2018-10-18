@@ -152,6 +152,35 @@
       \verb http://science.sciencemag.org/content/313/5786/504
       \endverb
     \endentry
+    \entry{entropy}{article}{}
+      \name{labelname}{1}{}{%
+        {{uniquename=0,hash=c7e14c68ca71b2d46f11759095288b4c}{Jost}{J\bibinitperiod}{Lou}{L\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=c7e14c68ca71b2d46f11759095288b4c}{Jost}{J\bibinitperiod}{Lou}{L\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{c7e14c68ca71b2d46f11759095288b4c}
+      \strng{fullhash}{c7e14c68ca71b2d46f11759095288b4c}
+      \field{sortinit}{J}
+      \field{sortinithash}{f75b22df8c340a961dce37019e29107f}
+      \field{labelyear}{nodate}
+      \field{labeltitle}{Entropy and diversity}
+      \field{abstract}{Entropies such as the Shannon–Wiener and Gini–Simpson indices are not themselves diversities. Conversion of these to effective number of species is the key to a unified and intuitive interpretation of diversity. Effective numbers of species derived from standard diversity indices share a common set of intuitive mathematical properties and behave as one would expect of a diversity, while raw indices do not. Contrary to Keylock, the lack of concavity of effective numbers of species is irrelevant as long as they are used as transformations of concave alpha, beta, and gamma entropies. The practical importance of this transformation is demonstrated by applying it to a popular community similarity measure based on raw diversity indices or entropies. The standard similarity measure based on untransformed indices is shown to give misleading results, but transforming the indices or entropies to effective numbers of species produces a stable, easily interpreted, sensitive general similarity measure. General overlap measures derived from this transformed similarity measure yield the Jaccard index, Sørensen index, Horn index of overlap, and the Morisita–Horn index as special cases.}
+      \field{journaltitle}{Oikos}
+      \field{number}{2}
+      \field{title}{Entropy and diversity}
+      \field{volume}{113}
+      \field{pages}{363\bibrangedash 375}
+      \verb{doi}
+      \verb 10.1111/j.2006.0030-1299.14714.x
+      \endverb
+      \verb{eprint}
+      \verb https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.2006.0030-1299.14714.x
+      \endverb
+      \verb{url}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.1111/j.2006.0030-1299.14714.x
+      \endverb
+    \endentry
     \entry{karpathy}{misc}{}
       \name{labelname}{1}{}{%
         {{uniquename=0,hash=e91a4c2044bccdbef249eabc886ff988}{Karpathy}{K\bibinitperiod}{Andrej}{A\bibinitperiod}{}{}{}{}}%
@@ -406,6 +435,33 @@
       \verb{url}
       \verb http://dl.acm.org/citation.cfm?id=645529.658134
       \endverb
+    \endentry
+    \entry{Schulman15}{article}{}
+      \name{labelname}{5}{}{%
+        {{uniquename=0,hash=3e09bd2a25d237ebdaed560a07c0451e}{Schulman}{S\bibinitperiod}{John}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=a901fd78fe1108cfa7d11129644967c7}{Moritz}{M\bibinitperiod}{Philipp}{P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=c9545da54b33744da25943cdf66eadac}{Levine}{L\bibinitperiod}{Sergey}{S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=f70df67fe1d13567b704ad143006af68}{Jordan}{J\bibinitperiod}{Michael\bibnamedelima I.}{M\bibinitperiod\bibinitdelim I\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=e28d4ee199593959d8c29980a64f1974}{Abbeel}{A\bibinitperiod}{Pieter}{P\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{5}{}{%
+        {{uniquename=0,hash=3e09bd2a25d237ebdaed560a07c0451e}{Schulman}{S\bibinitperiod}{John}{J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=a901fd78fe1108cfa7d11129644967c7}{Moritz}{M\bibinitperiod}{Philipp}{P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=c9545da54b33744da25943cdf66eadac}{Levine}{L\bibinitperiod}{Sergey}{S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=f70df67fe1d13567b704ad143006af68}{Jordan}{J\bibinitperiod}{Michael\bibnamedelima I.}{M\bibinitperiod\bibinitdelim I\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=e28d4ee199593959d8c29980a64f1974}{Abbeel}{A\bibinitperiod}{Pieter}{P\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{8d6613ae59595910252a86a61babf6c8}
+      \strng{fullhash}{30a9aae9d2f91398dc1ae9425059b010}
+      \field{sortinit}{S}
+      \field{sortinithash}{4125bb4c3a0eb3eaee3ea6da32eb70c8}
+      \field{labelyear}{2015}
+      \field{datelabelsource}{}
+      \field{labeltitle}{High-Dimensional Continuous Control Using Generalized Advantage Estimation}
+      \field{journaltitle}{CoRR}
+      \field{title}{High-Dimensional Continuous Control Using Generalized Advantage Estimation}
+      \field{volume}{abs/1506.02438}
+      \field{year}{2015}
     \endentry
     \entry{Shogi17}{article}{}
       \name{labelname}{13}{}{%

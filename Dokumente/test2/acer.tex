@@ -9,6 +9,7 @@ These approaches were combined with truncated importance sampling with bias corr
 For continuous action spaces, stochastic dueling network architectures were used.
 
 Acer can be viewed as an off-policy extension of A3C \citep{A3C}.
+To understand the ACER-gradient, we start from the importance weighted policy gradient.
 
 The importance weighted policy gradient is given by:
 \begin{align}
@@ -22,12 +23,15 @@ g^{marg} = E_{s_{t \textasciitilde{}} \beta, a_{t \textasciitilde{}} \mu} \left[
 \label{gmarg}
 \end{align}
 
-where $\beta$ denotes the limiting distribution and behaviour policy $\mu$
+where $\beta$ denotes the limiting distribution and $\mu$ the behaviour policy.
 
 To compute this gradient, knowledge about $Q^\pi$ is nessecary. The retrace values (\ref{qretrace}) present a good estimation for $Q^\pi$.
 
 To further reduce the variance, the importance weights are truncated.
-A core problem of actor-critic methods is the tradeoff between bias and variance. By truncating the importance weights, bias is introduced.
+A core problem of actor-critic methods is the tradeoff between bias and variance. 
+
+By truncating the importance weights, bias is introduced.
+Finding a good tradeoff between variance and bias is essential for the success of an RL-algorithm.
 To counter this, ACER uses a bias correction term.
 
 We will replace the importance weight $p_t$ in \ref{gmarg} with their truncated terms \bar{p_t} = min \{ c,p_t \}, where c denoted the truncation value.
@@ -38,9 +42,9 @@ The introduced bias correction term is given as:
 E_{x_t}\left[E_{a_{\textasciitilde{}\pi}} \left(\left[\frac{p_t(a) -c}{p_t(a)\right]}_+ \nabla_\theta log \pi_\theta(a \mid s_t) Q_\pi(s_t,a)\right)\right]
 \end{equation}
 
-To receive the ACER policy gradient we simply replace the $Q$ terms with our approximation. For the gradient term, the retrace values are used again, which further reduces variance. The values for the correction terms are estimated by our net.
+To receive the ACER policy gradient we simply replace the $Q$ terms with our approximations. For the gradient term, the retrace values are used as an approximation, which further reduces variance in comparison to simply using the estimated Q-function. $Q_\pi$ in the correction term is simply estimated by our critic.
 
-Finally we use the approximation of the Value function, which is simply retrieved by taking the expectation of $Q_{\theta_v}$ under $\pi_\theta$ as a baseline by subtracting them from the Q terms.
+Finally we use the approximation of the value function, which is simply retrieved by taking the expectation of $Q_{\theta_v}$ under $\pi_\theta$ as a baseline by subtracting them from the Q terms.
 
 This leaves us with the ACER policy gradient:
 
@@ -55,20 +59,34 @@ Note that the expectation over states is no longer necessary, because it is appr
 
 The critic $Q_\theta_v$ is trained by minimizing the mean squared error with the retrace values as the target.
 
+The critic loss function is given as: 
+
+\begin{equation}
+(Q^{ret} (s_t,a_t) - Q_{\theta_v} (s_t,a_t))^2 
+\end{equation}
+
+and has the standard gradient:
+
+\begin{equation}
+(Q^{ret}(s_t,a_t) -Q_{\theta_v}))\nabla_{\theta_v}Q_{\theta_v}(s_t,a_t))
+\end{equation}
+
 An entropy term of the policy $\pi$ is added to the loss function.
-Using entropy encourages random actions (exploration). Adding the entropy to the loss has shown to prevent early convergence to suboptimal policies.
+Using entropy encourages exploration. Adding the entropy to the loss has shown to prevent early convergence to suboptimal policies.
 
 The Entropy for a policy $\pi$ is given by:
 
 \begin{equation}
-H(\pi) = -\sum^A_{i=1} P(a_i)\log_b P(a_i)
+H(\pi) = -\sum^A_{i=1} \pi(a_i)\log_b \pi(a_i)
 \end{equation}
 
+where b denotes the basis for the logarithm. A common choice for the  base are 2, 10 or e. \citep{entropy}
 
 \citet{ACER} proposed an efficient trust region policy optimization (TRPO), which limits the update step in a way, that the new policy doesnt deviate too much from an average policy. 
 
-Even though the improvement through the TRPO method on the continuous action space environments was significant, the results presented in the paper only showed a marginal improvement for discrete action space environments.
-Because all experiments in this thesis are on discrete action space in order to run more experiments the TRPO was not used.
+Even though the TRPO method significantly improves the performance for continuous action space environments, the results presented in the paper only showed a marginal improvement for discrete action space environments.
+TRPO comes with a relatively high computational cost in comparison to it's benefits on the discrete action space.
+Since only discrete action spaces were considered within this work, in order to conduct more experiments within the limitations of time and computational ressources, the trust region optimization was not used.
 
 \subsection{Experimental Setup}
 
@@ -88,14 +106,29 @@ Scoring well on this environment can be considered a great achievement.
 The hyperparameters were adjusted to ensure a good performance for the Breakout environment. Test on other environments were all performed with the same set of hyperparameters.
 
 
-OpenAI gym environments provide the agent with a 210x160 pixel colored image. An \textit{environment step} consist of frame skipping, which means, that the action fed into the environment is repeated for k frames. Where k denotes a random number within $\{2,3,4\}$.
+OpenAI gym environments provide the agent with a 210x160 pixel colored image. OpenAI uses a variation of the frame skipping method proposed by \citet{nature}.
+Whenever the agent takes an action within the environment, instead of using it once and observing every state, the action is repeated over $k \in \{2,3,4\}$ game steps, and only every k'th observation is returned to the agent. Frame skipping reduces the workload of the agent and the length of the episodes, enabeling a faster learning process.
+
+
 \subsubsection{Preprocessing}
-Using full scale colored images would come with huge computational cost. To be able to work with the data, each frame is preprocessed.
-After grayscaling and transforming the frame, the scoreboard area is chopped off. With this method a 84x84 grayscaled pixel image is obtained. 
+Using full scale colored images would come with huge computational cost, resulting in a very slow learning process.
+To make efficient use of the data, each frame is preprocessed first.
+First off all the scoreboard area on top of the frame is chopped off, leaving roughly the playing area behind.
+
+The playing area is grayscaled and resized the frame to a. With this method a 84x84 grayscaled pixel image is obtained.
+Different grayscaling methods exist (Intensity, Luma, Lightness,...). Within this thesis we worked with the luminance. It is given as
+
+\begin{equation}
+G_{Luminance} \gets 0.3 R + 0.59 G + 0.11 B,
+\end{equation}
+
+with R, G and B denoting the red, green and blue values.
 
 \citet{nature} proposed to stack multiple frames. More specifically the state contains the last 4 frames received and therefore has a shape of 84x84x4.
 
 To receive the initial state, we simply stack the first frame 4 times.
+
+This can convey a feeling of movement to the agent.
 
 \begin{figure}
 \includegraphics[scale=0.5]{bilder/atarienv.png}
@@ -130,11 +163,12 @@ The final shared layers is then mapped to the action space twice to obtain the a
 The action is randomly sampled from the softmax probabilities.
 
 \begin{equation}
-P(A = a' | s ) = \frac{e^{z_{a'}}}{\sum^N_{i=0}e^{z_{a_i}}} 
+P(A = a' | s ) = \frac{e^{z_\theta(a')}}{\sum^N_{i=0}e^{z_\theta(a_i)}} 
 \end{equation}
 
-where $z_{a}$ denotes the score assigned to the action through the last network layer.
+where $z_\theta(a_i)$ denotes the score assigned to the i'th action through the last network layer.
 
+within our 
 
 \begin{figure}
 \includegraphics[scale=0.5]{bilder/nn2.png}
@@ -153,21 +187,92 @@ For the offline setting, replay ratios of 1, 2 and 4 were considered, where a ra
 
 The update was performed using an RMSProp Optimizer.
 The RMSProp update is given by:
-\begin{equation}
-g = \alpha g + (1- \alpha) \delta \theta^2 and \theta \gets \theta - \eta \frac{\delta \theta}{ \sqrt{g+\epsilon}}
-\end{equation}
+\begin{align}
+g = \alpha g + (1- \alpha) \delta \theta^2 \\ \theta \gets \theta - \eta \frac{\delta \theta}{ \sqrt{g+\epsilon}}
+\end{align}
 
 where $\eta$ denotes the learning rate and $\alpha$ is the momentum. $\epsilon$ is a small value to prevent dividing by 0.
 
 RMSProp has shown to be very robust for Asynchrounous Actor critic Methods. \citep{A3C}
 
-A single Optimizer is used for all threads, which gives a smoother momentum and showed better results compated to having a seperate Optimizer for each thread.
+A single Optimizer is used for all threads, which gives a smoother momentum and showed better results compared to using a seperate optimizer for each thread.
 
+Since RMSPropOptimizer in tensorflow, which was used for the implementation, can only use gradient decent, the following Loss-Function was minimized. Instead of having seperate updates for policy, value function and entropy, a single loss is formed and optmized.
+
+\begin{equation}
+L_{ACER} = - L_{Policy} + w_q L_{Q} + \beta Entropy
+\end{equation}
+
+with L denoting the loss. $w_q$ and $\beta$ are hyperparameters used to decide how much influece the value loss and the entropy should have on the parameters compared to the policy loss. Common values for $w_q$ are 0.5 or 0.25, whereas the entropy is usually weighted with 0.01 or 0.001.
 
 \begin{figure}
 \includegraphics[scale=0.5]{bilder/ACERarchitecture.png}
 \end{figure}
+\pagebreak
+\subsection{Hyperparameter settings}
 
+Unless said to be else, the following hyperparameters were used.
+
+\begin{tabular}{ |l|l|l| }
+\hline
+\multicolumn{3}{ |c| }{Hyperparameters} \\
+\hline
+Parameter & Value & Explanation  \\
+\hline
+LR & 8e-5 & learning rate \\
+Discount & 0.99 & \\
+return steps & 20 & \\
+c & 10 & truncation value \\
+$\beta$ & 0.01 & weigth of entropy in the loss function \\
+$w_q$ & 0.25 & weigth of value loss. \\
+RMSProp decay & 0.99 & \\
+global norm & 10 & gradient clipping \\
+$\epsilon$  & 1e-6 & clipping value denoting the distance to 0 and 1 a probability is allowed to reach  \\ 
+\hline
+\end{tabular}
+
+\pagebreak
+\section{Results}
+
+The reward given in the graphics is the received and capped reward in comparison to the actual reward given by the environment we will take a look at afterward. The decision to use the capped rewards was made due to their lower variance, and because these rewards were used when optimizing the function. 
+
+\begin{figure}[h]
+\includegraphics[scale=0.5]{bilder/breakoutbyonline.png}
+\includegraphics[scale=0.5]{bilder/breakoutbytime.png}
+\caption{ACER results on the Breakout environment in regards to sample efficiency (left) and computation time(right).}
+\end{figure}
+\textbf{Breakout}
+
+We can see, that ACER is clearly more sample efficient with a higher replay ratio and quickly reaches better rewards. 
+The right side shows the performance in regards to the computation time. Instead of looking at actual time, we will instead consider the relation towards the online steps, since this does not depend on the performance of the machine. During our experiments we found an online step to take about 3 times longer than an offline update.
+In regards to the Breakout environment we can conclude, that using a higher replay ratio (within the tested ratios) offered better performance in terms of sample efficiency, but could not match the learning speed of the online agent.
+
+
+\begin{figure}[h]
+\includegraphics[scale=0.5]{bilder/spaceinvbyonline.png}
+\includegraphics[scale=0.5]{bilder/spaceinvbytime.png}
+\caption{ Results on SpaceInvaders in terms of sample effciency (left) and comutation time(right)}
+\end{figure}
+\textbf{Space Invaders}
+
+The poor performance of the online variant on SpaceInvaders came as a big surprise. Assuming this performance to be caused by e.g. a very unlucky initialization, the same test was used 2 more times, without achieving better results. In comparison the agents using replay had a much smoother performance curve.
+All replay ratios showed similar sample efficiency and.
+\begin{figure}[h]
+\includegraphics[scale=0.5]{bilder/seaquestbyonline.png}
+\includegraphics[scale=0.5]{bilder/seaquestbytime.png}
+\caption{ACER results on the Breakout environment in regards to sample efficiency (left) and computation time(right).}
+\label{seafig}
+\end{figure}
+
+\textit{Seaquest}
+
+Similar to the Results in Breakout, we can see that the replay agents are more sample efficient. We should note, that all replay agents, no matter the ratio learn relatively even and start to hit a cap in the end.
+Using a replay ratio of 1 showed the benefits of a smoothed learning process in comparison to the online agent, while achieving similar results in terms of processing time which is however mainly caused by the drop in performance for the online agent, which is similar to the results on Spaceinvaders.
+
+Even though the main purpose of ACER is to provide a sample efficient algorithm, it additionally seems to smoothen the learning process.
+
+
+\pagebreak
 
 \section{Preprocessing Atari Environments}
 
@@ -177,16 +282,28 @@ Good examples for this problem are environments like Sequest or Montezuma's reve
 
 Seaquest often gets learning agents stuck on local maxima, because unlike a human they do not refill the oxygen.
 A human player managed to outperform DQN \citep{nature} gaining 4x the reward on average for Seaquest. In Montezumas Revenge, DQN did not manage to receive any reward at all.
-This is in lign with the observations within this thesis. We can see in  figure PLACEHOLDER that the agent gets stuck on a suboptimal local maximum. 
+This is in lign with the observations within this thesis. Figure \ref{seafig} already shows the agents approaching a cap ~ 40.
 
 Even though future methods might overcome these problems, we can assume, that a well preprocessed environment will always outperform if compared with a poorly or non preprocessed environment.
 Through smart preprocessing even very basic policy gradient methods can solve environments like Pong.  \citep{karpathy}
 
 The core problem seaquest has, is that the agent often can not link the oxygen bar depleting to the end of the game. 
 An attempt to increace the influence of the oxygen bar on the actions, could be to simply to use space not relevant to the game to increase the size of the bar, therefore increasing it's influence on the policy.
-In Addition the hyperparameters for the return step: $k=50$ and $\gamma =0.995$ were adjusted to make future rewards more attractive to the learning agent.
+In addition the hyperparameters for the return step: $k=50$ and $\gamma =0.995$ were adjusted to make future rewards more attractive to the learning agent.
 
+\begin{figure}[h]
+\includegraphics[scale=1]{bilder/seaquestgamenopre.png}
+\includegraphics[scale=1]{bilder/seaquestgameprepro.png}
+\caption{Seaquest environment after normal (left) and individual (right) preprocessing}
+\end{figure}
 
+\begin{figure}[h]
+\includegraphics[scale=0.8]{bilder/seaquestprepro}
+\caption{Results of preprocessed Environment}
+\end{figure}
 
+By applying a minimal individual preprocessing to the Seaquest environment, and slightly adjusted hyperparameters, we managed to both accelerate the learning process and break through the local maximum the learning agents got stuck on in the previous tests.
+
+---- Placeholder: Comparison to normal seaquest environment with changed hyperparameters. ----
 \section{Adversial Attacks}
 

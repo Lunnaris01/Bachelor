@@ -6,18 +6,18 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {3}{\ignorespaces Actor, Critic, and Actor-Critic approach}}{10}{figure.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4}{\ignorespaces A3C by \citet {A3C}}}{11}{figure.4}
+\contentsline {figure}{\numberline {4}{\ignorespaces The Atari 2600 console games Breakout, SpaceInvaders, Riverraid and Seaquest before and after being processed.}}{17}{figure.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5}{\ignorespaces The Atari 2600 console games Breakout, SpaceInvaders, Riverraid and Seaquest before and after being processed.}}{17}{figure.5}
+\contentsline {figure}{\numberline {5}{\ignorespaces Shared network for policy and Q-Value approximization for an environment with 4 possible actions}}{18}{figure.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6}{\ignorespaces Shared network for policy and Q-Value approximization for an environment with 4 possible actions}}{18}{figure.6}
+\contentsline {figure}{\numberline {6}{\ignorespaces ACER results on the Breakout environment in regards to sample efficiency (left) and computation time(right).}}{21}{figure.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7}{\ignorespaces ACER results on the Breakout environment in regards to sample efficiency (left) and computation time(right).}}{21}{figure.7}
+\contentsline {figure}{\numberline {7}{\ignorespaces Results on Space Invaders in terms of sample effciency (left) and comutation time(right)}}{21}{figure.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {8}{\ignorespaces Results on SpaceInvaders in terms of sample effciency (left) and comutation time(right)}}{21}{figure.8}
+\contentsline {figure}{\numberline {8}{\ignorespaces ACER results on the Seaquest environment in regards to sample efficiency (left) and computation time(right).}}{22}{figure.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {9}{\ignorespaces ACER results on the Breakout environment in regards to sample efficiency (left) and computation time(right).}}{22}{figure.9}
+\contentsline {figure}{\numberline {9}{\ignorespaces ACER results on the Riverraid environment in regards to sample efficiency (left) and computation time(right).}}{22}{figure.9}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {10}{\ignorespaces Seaquest environment after normal (left) and individual (right) preprocessing}}{23}{figure.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {11}{\ignorespaces Results of preprocessed Environment}}{24}{figure.11}
+\contentsline {figure}{\numberline {11}{\ignorespaces Performance on seaquest for default settings \textbf {(1)}, changed hyperparameters \textbf {(2)}and changes hyperparameters with custom preprocessing \textbf {(3)}}}{24}{figure.11}

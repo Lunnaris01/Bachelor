@@ -219,6 +219,39 @@
       \field{volume}{abs/1701.07274}
       \field{year}{2017}
     \endentry
+    \entry{DDPG}{article}{}
+      \name{labelname}{8}{}{%
+        {{uniquename=0,hash=2e52abe1ebb8cb0b74c78afc7eaa3d4d}{Lillicrap}{L\bibinitperiod}{Timothy\bibnamedelima P.}{T\bibinitperiod\bibinitdelim P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=fd02b895f2b7576b1e0eb9bf7f6b1601}{Hunt}{H\bibinitperiod}{Jonathan\bibnamedelima J.}{J\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=4295e4094c426f01903ac60155866130}{Pritzel}{P\bibinitperiod}{Alexander}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=231312991eab5915498d6c19c2a8cd4e}{Heess}{H\bibinitperiod}{Nicolas}{N\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=3b79ca47f08451987877fd8682e971e5}{Erez}{E\bibinitperiod}{Tom}{T\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=58112cb88a80c1bc045b6eaab26a8695}{Tassa}{T\bibinitperiod}{Yuval}{Y\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=89dbd30410c2085cd059f32c57d4593e}{Silver}{S\bibinitperiod}{David}{D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=d7805381550fb5f8360345f7f72c0b49}{Wierstra}{W\bibinitperiod}{Daan}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{8}{}{%
+        {{uniquename=0,hash=2e52abe1ebb8cb0b74c78afc7eaa3d4d}{Lillicrap}{L\bibinitperiod}{Timothy\bibnamedelima P.}{T\bibinitperiod\bibinitdelim P\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=fd02b895f2b7576b1e0eb9bf7f6b1601}{Hunt}{H\bibinitperiod}{Jonathan\bibnamedelima J.}{J\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=4295e4094c426f01903ac60155866130}{Pritzel}{P\bibinitperiod}{Alexander}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=231312991eab5915498d6c19c2a8cd4e}{Heess}{H\bibinitperiod}{Nicolas}{N\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=3b79ca47f08451987877fd8682e971e5}{Erez}{E\bibinitperiod}{Tom}{T\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=58112cb88a80c1bc045b6eaab26a8695}{Tassa}{T\bibinitperiod}{Yuval}{Y\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=89dbd30410c2085cd059f32c57d4593e}{Silver}{S\bibinitperiod}{David}{D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=d7805381550fb5f8360345f7f72c0b49}{Wierstra}{W\bibinitperiod}{Daan}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{b595e8f5cf798536231c5e976cebef7b}
+      \strng{fullhash}{b6d102ee0c52da6538eee90e49f8f45b}
+      \field{sortinit}{L}
+      \field{sortinithash}{c41a2b5886eeae464e75d1a9df4cd13e}
+      \field{labelyear}{2015}
+      \field{datelabelsource}{}
+      \field{labeltitle}{Continuous control with deep reinforcement learning}
+      \field{journaltitle}{CoRR}
+      \field{title}{Continuous control with deep reinforcement learning}
+      \field{volume}{abs/1509.02971}
+      \field{year}{2015}
+    \endentry
     \entry{A3C}{article}{}
       \name{labelname}{8}{}{%
         {{uniquename=0,hash=f7d23cfe4ca0e6bf7a8c251bfa78aca6}{Mnih}{M\bibinitperiod}{Volodymyr}{V\bibinitperiod}{}{}{}{}}%

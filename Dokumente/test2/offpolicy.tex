@@ -2,49 +2,54 @@
 \section{Off-Policy Learning}
 \raggedbottom 
 
-Off-policy methods use data sampled from a so called  \textit{behavior policy} we will denote as $\mu(a \mid s)$  to optimize the agents \textit{current/target policy}  $\pi$.
+Off-policy methods use data that was previously sampled under a so called  \textit{behavior policy} we will denote as $\mu(a \mid s)$  which is different to the \textit{current/target policy}  $\pi$ we would like to optimize.
 
 One benefit of off-policy learning is the possibility to chose a more exploratory behaviour policy. 
 Another benefit is the possibility to increase sample efficiency by reusing old data.
 \citep{Degris12}
 
-Off-policy methods can have the drawback of being divergent. The class of Asynchronous Methods A3C belongs to is always slightly off-policy is only slightly off-policy, which doesn't impact the convergence.
+Off-policy methods can have the drawback of being divergent.
+The class of Asynchronous Methods A3C belongs to is always slightly off-policy, but since the behaviour policy is close enough to the target policy, the influence is neglectable
 
-If the behaviour policy can be very different from the target policy, the algorithm can no longer be viewed as \textit{safe}. \citep{Munos16}
+Whenever the behaviour policy differs too much from the target policy, the algorithm can no longer be viewed as \textit{safe} without correcting for the 'off-policyness'. \citep{Munos16}
 
-This problem is adressed by many different Methods, in order to ensure convergence, even for arbitraty "off-policyness" of sampled data.
+Ensuring convergence even for an arbitrary level of 'off-policyness' is a problem adressed by a multitude of methods.
+We will look at the most important once, leading up to the retrace-algorithm used for our experiments.
 
 \subsection{Importance Sampling (IS)}
 
-One of the most basic ideas is to correct for the "off-policyness" by using Importance sampling.
-It is a classic technique for estimating the value of a random variable $x$ with distribution $d$ if the samples were drawn from another distribution $d'$
-By using the product of the likelihood ratios 
+One of the most basic ideas is to correct for the "off-policyness" by using importance sampling (IS).
+It is a classic and well known technique for estimating the value of a random variable $x$ with distribution $d$  if the samples were drawn from another distribution $d'$
+by using the product of the likelihood ratios.
+
+In regards to $\pi$ and $\mu$ the importance weight is denoted as
+
 \begin{align}
 {
-p_t = \frac{\pi (a_t \mid s_t)}{\mu (a_t \mid s_t)}
+p_t = \frac{\pi (a_t \mid s_t)}{\mu (a_t \mid s_t)}.
 }
 \label{IW}
 \end{align}
-Even though this method can guarantee convergence \citep{Munos16}, it comes with the risk of high, possible infinite  variance, due to the variance of the product of importance weights.
+Even though this method can guarantee convergence \citep{Munos16} for arbitrary $\pi$ and $\mu$, it comes with the risk of high, possible infinite  variance, due to the variance of the product of importance weights.
 
 \subsection{Tree-backup, TB(\lambda)}
 
-The tree-backup method allows off-policy corrections, without the use of imporance sampling by using the expectation and values under the target policy $\pi$ of every untaken action. \citet{Precup00}
+The tree-backup method allows off-policy corrections, without the use of importance sampling by using estimated values of untaken actions as an offset to the rewards from the off-policy sample. \citet{Precup00}
 
 The algorithm provides low variance off-policy learning with strong convergence.
 However if a sample is drawn from a policy which is close to the target policy, the algorithm unnessecarly cuts the traces. Without using the full returns, the learning process is slowed down.
 \pagebreak
 \subsection{Retrace($\lambda$)}
 
-\citet{Munos16} introduced the Retrace($\lambda$) algorithm. By combining ideas of importance sampling and tree-backup, low varience with strong convergence was achieved while keeping the benefits of full returns.
+\citet{Munos16} introduced the retrace($\lambda$) algorithm. By combining ideas of importance sampling and tree-backup, a method with strong convergence, yet low variance was achieved that is still able to use the benefits of full returns.
 
-Like TB($\lambda$) the traces are safely cut in case off strong "off-policyness", without impacting the update too much, if the data was sampled under a behaviour policy $\mu$ close to the target policy $\pi$.
+Similar to how it is done in TB($\lambda$), the traces are safely cut in case off strong "off-policyness", but without impacting the update too much, if the data was sampled under a behaviour policy $\mu$ close to the target policy $\pi$.
 
 Retrace values for a q funcion are obtained recursively by
 
 \begin{align}
 {
-Q^{ret}(x_t,a_t)=r_t+\gamma \tilde{p}^_{t+1}[Q^{ret}(x_{t+1},a_{t+a} ) -  Q(x_{t+a},a_{t+1})] + \gamma V(x_{t+1})
+Q^{ret}(x_t,a_t)=r_t+\gamma \tilde{p}_{t+1} [Q^{ret}(x_{t+1},a_{t+1} ) -  Q(x_{t+1},a_{t+1})] + \gamma V(x_{t+1})
 }
 \label{qretrace}
 \end{align}

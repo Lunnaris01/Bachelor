@@ -2,16 +2,16 @@
 \section{Off-Policy Learning}
 \raggedbottom 
 
-Off-policy methods use data previously sampled under a so-called \textit{behavior policy} denoted as $\mu(a \mid s)$  which is different to the \textit{current/target policy}  $\pi$ that is optimized.
+Off-policy methods use data previously sampled under a so-called \textit{behaviour policy} denoted as $\mu(a \mid s)$  which is different to the \textit{current/target policy}  $\pi$ that is optimized.
 
-One benefit of off-policy learning is the possibility to chose a more exploratory behaviour policy. 
-Another benefit is the possibility to increase sample efficiency by reusing old data.
-\citep{Degris12}
+One benefit of off-policy learning is the possibility to choose a more exploratory behaviour policy. 
+Another benefit is the possibility to increase sample efficiency by reusing old data
+\citep{Degris12}.
 
 Off-policy methods can have the drawback of being divergent.
-The class of asynchronous methods A3C belongs to is always slightly off-policy, but since the behaviour policy is close enough to the target policy, the influence is neglectable
+Asynchronous methods like A3C are always slightly off-policy, but since the behaviour policy is close enough to the target policy, the influence is neglectable.
 
-Whenever the behaviour policy differs too much from the target policy, the algorithm can no longer be viewed as \textit{safe} without correcting for the 'off-policyness'. \citep{Munos16}
+Whenever the behaviour policy differs too much from the target policy, the algorithm can no longer be viewed as \textit{safe} without correcting for the 'off-policyness' \citep{Munos16}.
 
 Ensuring convergence even for an arbitrary level of 'off-policyness' is a problem addressed by a multitude of methods.
 We will look at the most important ones, leading up to the retrace-algorithm used for our experiments.
@@ -57,8 +57,8 @@ Q^{ret}(x_t,a_t)=r_t+\gamma \tilde{p}_{t+1} [Q^{ret}(x_{t+1},a_{t+1} ) -  Q(x_{t
 with $\tilde{p} = min\{c,p_t\}$ being the truncated importance weight $p_t$ (\ref{IW}).
 
 In case of a terminal state, the retrace value is equal to the final reward.
-Note that the formula is given considering $\lambda = 1$
+Note that the formula is given considering $\lambda = 1$.
 
-As $\lambda = 1$ performs the best for the Atari console games \citep{Munos16}, other values were not considered within this Thesis.
+As $\lambda = 1$ performs the best for the Atari console games \citep{Munos16}, other values were not considered within this thesis.
 
 \pagebreak

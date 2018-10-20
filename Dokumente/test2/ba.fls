@@ -303,6 +303,12 @@ INPUT ./bilder/riverraidbyonline.png
 INPUT bilder/riverraidbytime.png
 INPUT ./bilder/riverraidbytime.png
 INPUT ./bilder/riverraidbytime.png
+INPUT bilder/riverraidreplayonline.png
+INPUT ./bilder/riverraidreplayonline.png
+INPUT ./bilder/riverraidreplayonline.png
+INPUT bilder/riverraidreplaytime.png
+INPUT ./bilder/riverraidreplaytime.png
+INPUT ./bilder/riverraidreplaytime.png
 INPUT bilder/seaquestgamenopre.png
 INPUT ./bilder/seaquestgamenopre.png
 INPUT ./bilder/seaquestgamenopre.png
@@ -323,9 +329,6 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm
 INPUT ba.lof
 INPUT ba.lof
 OUTPUT ba.lof
-INPUT ba.lot
-INPUT ba.lot
-OUTPUT ba.lot
 INPUT ba.aux
 INPUT offpolicy.aux
 INPUT offpolicy.aux

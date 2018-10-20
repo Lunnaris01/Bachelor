@@ -2,22 +2,22 @@
 \raggedbottom 
 A wide range of reinforcement learning problems and many different approaches to effectively solve them exist.
 
-Dynamic programming methods can compute optimal policies, however a perfect model of the environment as MDP is required.
+Dynamic programming methods can compute optimal policies, however, a perfect model of the environment as MDP is required.
 
 Monte-Carlo methods on the other hand can estimate value functions and discover optimal policies by averaging over sampled trajectories without a model.
 
 \subsection{Monte-Carlo Predictions}
 
-We call a complete run of the environment from start to termination an \textit{episode}.
-Monte-Carlo methods require complete episodes to learn. We can use them to estimate the value of a state by calculating the discounted returns for every encountered state and changing the current estimate slightly in the direction of the discounted return.
+A complete run of the environment from start to termination is called an \textit{episode}.
+Monte-Carlo methods require complete episodes to learn. They estimate the value of a state by calculating the discounted returns for every encountered state and changing the current estimate slightly in the direction of the discounted return.
 
 MC-methods learn relatively fast, however each update requires a full episode.
 
 \subsection{TD-Learning}
 
-\cite{Sut98} describes \textit{temporal difference} (TD) learning as one of the central ideas in reinforcement learning.
-TD learning combines dynamic programming and Monte-Carlo ideas to learn eather \textit{state-values: V(s)} or \textit{state-action values: Q(s, a)}
-Just like Monte-Carlo methods, TD methods can learn directly from experience without the need of a model, but do not require finished episodes. Instead the encountered rewards are combined with an estimate of the discounted return following them. This is called \textit{bootstrapping}
+\citet{Sut98} describe \textit{temporal difference} (TD) learning as one of the central ideas in reinforcement learning.
+TD learning combines dynamic programming and Monte-Carlo ideas to learn either \textit{state-values: V(s)} or \textit{state-action values: Q(s, a)}.
+Like Monte-Carlo methods, TD methods can learn directly from experience without the need of a model, but do not require finished episodes. Instead the encountered rewards are combined with an estimate of the discounted return following them. This is called \textit{bootstrapping}.
 
 We will take a look at the most basic TD method for learning a value function. 
 The update step is given as:
@@ -26,6 +26,7 @@ The update step is given as:
 V(s_t)\gets V(s_t)+ \alpha [r_{t+1} + \gamma V(s_{t+1})-V(s_t)]
 \end{equation}
 
+$\alpha$ denoted the learning rate.
 Another popular TD-Method is Q-Learning.
 It is used to estimate the state-action value function $Q$, and has a similar update step:
 
@@ -36,7 +37,7 @@ Q(s_t,a_t)\gets Q(s_t,a_t)+ \alpha [r_{t+1} + \gamma \max_a Q(s_{t+1},a)-Q(s_t,a
 After learning a Q-function, the agent has a reliable method to estimate and maximize the return, considering the learned function resembles the \textit{true state-value function} $Q*$ close enough. 
 A common approach to achieve this is the use of a $\epsilon$-greedy policy, where a gradually decreasing value $\epsilon$ is used to decide if a random action or the action assumed to be the best according to the learned function is taken. 
 
-This ensures both sufficient exploration and  exploitation, as it starts with a (mostly) random policy, and ends up with a deterministic policy always choosing the action with the highest estimated return.\citet{Sut98}
+This ensures both sufficient exploration and  exploitation, as it starts with a (mostly) random policy, and ends up with a deterministic policy always choosing the action with the highest estimated return \citep{Sut98}.
 
 \begin{algorithm}[h]
 
@@ -63,11 +64,11 @@ This ensures both sufficient exploration and  exploitation, as it starts with a 
 
 \subsection{N-Step TD-Learning}
 
-The TD-Learning algorithms shown bootstrap after a single observation. This can become very inefficient with long episodes, especially if the final reward (e.g. winning or losing a game) is very important. Propagating this information along the trajectory requires many iterations.
-In general TD-Learning is rather slow, compared to learning from full returns.
+The shown TD-Learning algorithms bootstrap after a single observation. This can become very inefficient with long episodes, especially if the final reward (e.g. winning or losing a game) is very important. Propagating this information along the trajectory requires many iterations.
+In general, TD-Learning is rather slow compared to learning from full returns.
 
 We can approach this problem by using n-step TD-learning.
-Note that an '$ \infty $-step' TD update would be the same as a Monte-Carlo updates.
+Note that an '$ \infty $-step' TD update would be the same as a Monte-Carlo update.
 
 By combining the Monte-Carlo target
 \begin{equation}
@@ -89,23 +90,23 @@ R_{t:t+n} = r_{t+1}+\gamma r_{t+2}+\gamma^2 r_{t+3}+ \dots +\gamma^{n-1} r_{t+n}
 denotes the discounted return for the next n steps.
 \subsection{Critic-Only Methods}
 
-The shown Q-learning algorith or SARSA are popular critic-only methods.
+The shown Q-learning algorithm or SARSA are popular critic-only methods.
 
-They do not contain an explicit function for the policy, but rather derive it from the learned state-action values by acting greedy on the Q-Values.
+They do not contain an explicit function for the policy, but derive it from the learned state-action values by acting greedy on the Q-Values.
 
-Critic-only methods provice a low variance estimate of the expected returns, however the methods suffer from being biased and can be problematic in terms of convergence.
+Critic-only methods provide a low variance estimate of the expected returns, however the methods suffer from being biased and can be problematic in terms of convergence.
 
 \subsection{Actor-Only Methods}
 
-Unlike critic-only methods, actor only methods do not learn any state or state-action values.
-Instead they perform optimization steps direclty on the policy $\pi$.
+Unlike critic-only methods, actor-only methods do not learn any state or state-action values.
+Instead, they perform optimisation steps direclty on the policy $\pi$.
 
-Usually the policy $\pi$ is parameterized by $\theta$, denoted as $\pi_\theta$, but deterministic policy gradient methods are possible\citep{DDPG}. 
+Usually the policy $\pi$ is parameterized by $\theta$, denoted as $\pi_\theta$, but deterministic policy gradient methods are possible \citep{DDPG}. 
 
 Policy gradient methods like REINFORCE change the policy in order to maximize the average reward at a given timestep by performing gradient ascent \citep{Williams1992}. 
 We define an objective function $J(\theta)$ which is a measurement of performance.
 
-The learning agent then tries to maximize $J(\theta)$ through gradient ascent
+The learning agent tries to maximize $J(\theta)$ through gradient ascent
 
 \begin{equation}
 \theta_{t+1} = \theta_t + \alpha \widehat{\nabla J(\theta_t)}
@@ -120,17 +121,17 @@ For the episodic case we define $J(\theta)$ to be the initial value of our polic
 J(\theta) \doteq v_{\pi_\theta}(s_0)
 \end{equation}
 
-We can approximate the gradient of $J(\theta)$ , $ \nabla v_{\pi_\theta}(s_0)$ through
+Because of the policy gradient theorem, the gradient of $J(\theta)$ , $ \nabla v_{\pi_\theta}(s_0)$ can be approximated as
 
 \begin{equation}
-\nabla J(\theta) \propto \sum_s \mu (s) \sum_a q_\pi (s,a) \nabla_\theta \pi(a \mid s, \theta)
+\nabla J(\theta) \propto \sum_s \mu (s) \sum_a q_\pi (s,a) \nabla_\theta \pi(a \mid s, \theta).
 \end{equation}
 
-thanks to the policy gradient theorem. The proof for this theorem can be found in the reinforcement learning book by \citet{Sut98}.
+The proof for this theorem can be found in the reinforcement learning book by \citet{Sut98}.
 
 $\mu$ denotes the on-policy distribution under $\pi$.
 
-However if trajectories are sampled on-policy, we can simply rewrite this as the expectation under policy $\pi$:
+However, if trajectories are sampled on-policy, we can rewrite this as the expectation under policy $\pi$:
 
 \begin{equation}
 \nabla J(\theta) \propto E_\pi \left[ \sum_a q_\pi (s_t,a) \nabla_\theta \pi (a \mid s_t, \theta) \right]
@@ -160,19 +161,19 @@ However if trajectories are sampled on-policy, we can simply rewrite this as the
 
 
 In contrast to value based approaches, policy gradient methods provide strong convergence to at least a local maximum.
-On top of that, actor methods are applicable on continuous action spaces.
- \citep{Sutton00policygradient}
+On top of that, actor methods are applicable on continuous action spaces
+ \citep{Sutton00policygradient}.
  
-Actor-only methods however suffer from a large variance of the gradient. Compared to critic-only methods their learning process is significantly slowed down. \citep{Grondman12}
+Actor-only methods however suffer from a large variance of the gradient. Compared to critic-only methods their learning process is significantly slower \citep{Grondman12}.
  
 
 \subsection{Actor-Critic Methods}
 
 Actor-critic methods tackle the problem of high variance in policy gradient methods with the use of a critic.
 
-They combine the strenght of both approaches to achieve a learning agent, which has strong convergence, yet low variance.
+They combine the strength of both approaches to achieve a learning agent, which has strong convergence, yet low variance.
 
-Since actor-critic methods are still policy gradient methods at their core, they provide the possibility to work on continuous actions spaces just like the actor-only approach.
+Since actor-critic methods are still policy gradient methods at their core, they provide the possibility to work on continuous actions spaces like the actor-only approach.
 
 The main reason for the variance in the gradient is the high variance of the return. By choosing a good baseline $ b(s)$, to the objective function, we can achieve a lower variance, without creating bias.
 The idea behind this is to increase the probability of an action in relation to how much better it is compared to other actions at this state, rather than the full return.
@@ -203,11 +204,11 @@ r_t + V_\pi(s_{t+1}) - V_\pi(s_t)
 
 In general we call an algorithm onpolicy, if the data used in the policy update was sampled under the same policy. The sequence of observed data encountered by an RL agent is strongly correlated and nonstationary \citep{A3C}. This can have a negative influence on the onpolicy learning process.
 
-A previous approach to this problem was to achieve decorrelation by using randomly selected samples from a replay memory. \citep{mnih2015atari}
+A previous approach to this problem was to achieve decorrelation by using randomly selected samples from a replay memory \citep{mnih2015atari}.
 
 Training an agent comes with a high demand for computational power. To achieve feasible training times, former algorithms heavily relied on a strong GPU.
 
-The asynchronous advantage actor critic(A3C) algorithm solves both problems, by training simultaneously on multiple environment.
+The asynchronous advantage actor critic (A3C) algorithm solves both problems, by training simultaneously on multiple environments.
 Each learner samples trajectories and computes gradients. Those gradients are then applied to the shared parameters. 
 After each global update step, the local parameters are synchronized.
 
@@ -217,7 +218,7 @@ Usually 16 or more environments are used to ensure proper decorrelation of the s
 
 \pagebreak
 A3C samples trajectories of length $n$ and uses the longest possible k-return for the update step, meaning the last state uses a one-step update, the second to last a two-step update and so on, with the first state using a n-step update.
-The gradients are accumulated over all state withing the trajectory and applied in a single gradient step. 
+The gradients are accumulated over all states within the trajectory and applied in a single gradient step. 
 
 \begin{algorithm}[t]
 // \textit{ Assume shared Parameters and counter} $ \theta^{global} ,\ \theta^{global}_v,\ T = 0 $

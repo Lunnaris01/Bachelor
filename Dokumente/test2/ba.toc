@@ -6,56 +6,54 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.1}Elements of Reinforcement Learning}{2}{subsection.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2}Markov Decision Process}{4}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.2}Markov Decision Process}{5}{subsection.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3}Deep Reinforcement Learning}{4}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.3}Deep Reinforcement Learning}{5}{subsection.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Actor-Critic Methods}{6}{section.3}
+\contentsline {section}{\numberline {3}Actor-Critic Methods}{7}{section.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1}Monte-Carlo Predictions}{6}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.1}Monte-Carlo Predictions}{7}{subsection.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2}TD-Learning}{6}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.2}TD-Learning}{7}{subsection.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3}N-Step TD-Learning}{7}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.3}N-Step TD-Learning}{8}{subsection.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4}Critic-Only Methods}{7}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.4}Critic-Only Methods}{8}{subsection.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5}Actor-Only Methods}{8}{subsection.3.5}
+\contentsline {subsection}{\numberline {3.5}Actor-Only Methods}{9}{subsection.3.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6}Actor-Critic Methods}{9}{subsection.3.6}
+\contentsline {subsection}{\numberline {3.6}Actor-Critic Methods}{10}{subsection.3.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.7}Asynchronous Advantage Actor Critic (A3C)}{10}{subsection.3.7}
+\contentsline {subsection}{\numberline {3.7}Asynchronous Advantage Actor Critic (A3C)}{11}{subsection.3.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Off-Policy Learning}{12}{section.4}
+\contentsline {section}{\numberline {4}Off-Policy Learning}{13}{section.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1}Importance Sampling (IS)}{12}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.1}Importance Sampling (IS)}{13}{subsection.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2}Tree-backup, TB(\lambda )}{12}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.2}Tree-backup, TB(\lambda )}{13}{subsection.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3}Retrace($\lambda $)}{13}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.3}Retrace($\lambda $)}{14}{subsection.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Actor-Critic with Experience Replay (ACER)}{14}{section.5}
+\contentsline {section}{\numberline {5}Actor-Critic with Experience Replay (ACER)}{15}{section.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1}Experimental Setup}{16}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.1}Experimental Setup}{17}{subsection.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.1.1}Environment}{16}{subsubsection.5.1.1}
+\contentsline {subsubsection}{\numberline {5.1.1}Environment}{17}{subsubsection.5.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.1.2}Preprocessing}{16}{subsubsection.5.1.2}
+\contentsline {subsubsection}{\numberline {5.1.2}Preprocessing}{17}{subsubsection.5.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.1.3}network architecture}{17}{subsubsection.5.1.3}
+\contentsline {subsubsection}{\numberline {5.1.3}Network Architecture}{18}{subsubsection.5.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2}Hyperparameter settings}{20}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.2}Hyperparameter settings}{21}{subsection.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Results}{21}{section.6}
+\contentsline {section}{\numberline {6}Results}{22}{section.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}Preprocessing Atari Environments}{23}{section.7}
+\contentsline {section}{\numberline {7}Preprocessing Atari Environments}{25}{section.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8}Adversial Attacks}{24}{section.8}
+\contentsline {section}{\numberline {8}Adversial Attacks}{26}{section.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9}Conclusion}{24}{section.9}
+\contentsline {section}{\numberline {9}Conclusion}{26}{section.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{References}{26}{section*.4}
+\contentsline {section}{References}{28}{section*.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{List of Figures}{28}{section*.5}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{List of Tables}{28}{section*.6}
+\contentsline {section}{List of Figures}{30}{section*.5}

@@ -20,6 +20,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {10}{\ignorespaces ACER results on the Riverraid environment in regards to sample efficiency (left) and computation time(right). (1) Uses replay throughout the full learning process. (2) Started replay after 1000 trajectories were saved to the buffer.}}{24}{figure.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {11}{\ignorespaces Seaquest environment after normal (left) and individual (right) preprocessing}}{25}{figure.11}
+\contentsline {figure}{\numberline {11}{\ignorespaces ACER results on the Breakout environment in regards to sample efficiency (left) and computation time(right). (1) Uses replay throughout the full learning process. (2) Started replay after 1000 trajectories were saved to the buffer.}}{25}{figure.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {12}{\ignorespaces Seaquest for default settings \textbf {(1)}, changed hyperparameters \textbf {(2)} and changed hyperparameters with custom preprocessing \textbf {(3)}. A replay ratio of 2 was used for all 3 runs.}}{26}{figure.12}
+\contentsline {figure}{\numberline {12}{\ignorespaces ACER results on the Seaquest environment in regards to sample efficiency (left) and computation time(right). (1) Uses replay throughout the full learning process. (2) Started replay after 1000 trajectories were saved to the buffer.}}{25}{figure.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {13}{\ignorespaces Seaquest environment after normal (left) and individual (right) preprocessing}}{26}{figure.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {14}{\ignorespaces Seaquest for default settings \textbf {(1)}, changed hyperparameters \textbf {(2)} and changed hyperparameters with custom preprocessing \textbf {(3)}. A replay ratio of 2 was used for all 3 runs.}}{27}{figure.14}

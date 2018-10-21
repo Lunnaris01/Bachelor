@@ -300,15 +300,34 @@ The experiments conducted on the Riverraid environment showed a rather slow lear
 
 An attempt to fix this problem is to fill up a certain amount of the replay buffer first, and start the experience replay afterwards, to not reuse the same trajectory too often in the learning process. Sadly the Riverraid environment was the last environment to do experiments on, leaving us with little time to compare results with and without first filling up the replay buffer for different replay ratios and environments.
 
-Even though the observed results showed better overall performance, the slow learning in the early phase remained
-
 \begin{figure}[h]
 \includegraphics[scale=0.55]{bilder/riverraidreplayonline.png}
 \includegraphics[scale=0.55]{bilder/riverraidreplaytime.png}
 \caption{ACER results on the Riverraid environment in regards to sample efficiency (left) and computation time(right). (1) Uses replay throughout the full learning process. (2) Started replay after 1000 trajectories were saved to the buffer.}
 \end{figure}
 
+
+Even though the observed results showed better overall performance and the agent using a replay ratio of 4 managed to learn somthing, the slow learning in the early phase remained.
+
+
+\begin{figure}[h]
+\includegraphics[scale=0.55]{bilder/breakoutreplayonline.png}
+\includegraphics[scale=0.55]{bilder/breakoutreplaytime.png}
+\caption{ACER results on the Breakout environment in regards to sample efficiency (left) and computation time(right). (1) Uses replay throughout the full learning process. (2) Started replay after 1000 trajectories were saved to the buffer.}
+\end{figure}
+
+
+\begin{figure}[h]
+\includegraphics[scale=0.55]{bilder/seaquestreplayonline.png}
+\includegraphics[scale=0.55]{bilder/seaquestreplaytime.png}
+\caption{ACER results on the Seaquest environment in regards to sample efficiency (left) and computation time(right). (1) Uses replay throughout the full learning process. (2) Started replay after 1000 trajectories were saved to the buffer.}
+\end{figure}
+
+
 \pagebreak
+
+
+
 
 \section{Preprocessing Atari Environments}
 
@@ -338,9 +357,9 @@ In addition, the hyperparameters for the return step: $k=50$ and $\gamma =0.995$
 \caption{Seaquest for default settings \textbf{(1)}, changed hyperparameters \textbf{(2)} and changed hyperparameters with custom preprocessing \textbf{(3)}. A replay ratio of 2 was used for all 3 runs.}
 \end{figure}
 
-By applying a minimal individual preprocessing to the Seaquest environment, and slightly adjusted hyperparameters, we managed to both accelerate the learning process and break through the local maximum the learning agents got stuck on in the previous tests.
+By applying individual preprocessing to the Seaquest environment, and slightly adjusting the hyperparameters, we managed to both accelerate the learning process and break through the local maximum the learning agents got stuck on in the previous tests.
 
-Even though the results indicate an improved performance for the individually preprocessed environment, a clear statement cannot be made, because the change in hyperparameters managed to outperform the default settings and break through the local optimum as well.
+Even though the results indicate an improved performance for the individually preprocessed environment, a clear statement cannot be made, because the change in hyperparameters managed to outperform the default settings and break through the local optimum in a similar way.
 
 \section{Adversial Attacks}
 

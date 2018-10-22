@@ -48,12 +48,12 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6}Results}{22}{section.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}Preprocessing Atari Environments}{25}{section.7}
+\contentsline {section}{\numberline {7}Preprocessing Atari Environments}{27}{section.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8}Adversial Attacks}{26}{section.8}
+\contentsline {section}{\numberline {8}Conclusion}{29}{section.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9}Conclusion}{26}{section.9}
+\contentsline {section}{\numberline {A}ACER-Algorithm}{30}{appendix.A}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{References}{29}{section*.4}
+\contentsline {section}{References}{31}{section*.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{List of Figures}{31}{section*.5}
+\contentsline {section}{List of Figures}{33}{section*.5}

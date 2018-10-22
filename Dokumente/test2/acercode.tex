@@ -1,21 +1,23 @@
-
+\appendix
+\section{ACER-Algorithm}
+\label{appendixA}
 \begin{algorithm}[h]
 {
 // \textit{ Assume shared Parameters and counter} $ \theta^{global} ,\ T = 0 $
 
-// \textit{ with local conterparts $\theta$ }
+// \textit{ with local conterparts $t$ and $\theta$ }
 
  Initialize parameters for policy $\theta$ and critic $\theta_v$ and counter t=0
  
  \Repeat{T $ >$ T_{max}}
  {
-  Reset gradients $d\theta, d\theta_v$
+  Reset gradient $d\theta $
   
  \If{online}
  {
- Synchronize $ \theta, \theta_v$ with $\theta^{global} ,\theta^{global}_v$
+ Synchronize $ \theta $ with $\theta^{global} $
  
- get trajectory of length t by interacting with the environment
+ get trajectory of length k by interacting with the environment
  
   save trajectory to replay buffer. 
  }
@@ -42,16 +44,19 @@ $g$ \gets \min\{c, p_i(a_i) \} \nabla_\theta log(a_i \mid s_i) (Q^{ret} -V_i) \\
  
  $Q^{ret} \gets \tilde{p_i} (Q^{ret} - Q_\theta (s_i,a_i)) +V_\theta (s_i) $
  }
- Perform asynchronous update of $\theta^{global}$ and $\theta^{global}_v$ using d$\theta$, d$\theta_v$
+ Perform asynchronous update of $\theta^{global}$ using d$\theta$
+ 
  T = T+1
+ 
  t=t+1
-}
+
  \If {t \% replay\_ratio == 0}
  {
  online = True
  } 
  \Else
 {online = False}
+}
 }
 \label{ACERALGO}
  \caption{ACER for discrete actions (without TRPO) \citep{ACER}}

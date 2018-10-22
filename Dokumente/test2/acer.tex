@@ -88,7 +88,7 @@ Even though the TRPO method significantly improves the performance for continuou
 TRPO comes with a relatively high computational cost in comparison to its benefits on the discrete action space.
 Since only discrete action spaces were considered within this work, in order to conduct more experiments within the limitations of time and computational resources, the trust region optimization was not used.
 
-Pseudocode for the algorithm used can be found at the end of the thesis (Algorithm \ref{ACERALGO}).
+Pseudocode for the algorithm used can be found at the end of the thesis (\ref{appendixA}).
 
 \subsection{Experimental Setup}
 
@@ -181,14 +181,13 @@ where $z_\theta(a_i)$ denotes the score assigned to the i'th action through the 
 
 \end{figure}
 
-The agent is trained by using 16 learner threads running on the CPU. Each thread has it's own replay buffer, which ensures a more balanced replay and reduces the risk of a single trajectory being used unreasonably often compared to a single shared replay buffer.
+The agent is trained by using 16 learner threads running on the CPU. Each thread has its own replay buffer, which ensures a more balanced replay and reduces the risk of a single trajectory being used unreasonably often compared to a single shared replay buffer.
 
 Updates to the network were performed every 20 steps or if the environment reached a terminal state. 
 
 Replay buffers were designed to hold up to 2500 trajectories, therefore ~50.000 frames were saved for each thread and $_\tilde{}$ 800.000 frames were stored in total, which is the same size used by DQN \citep{nature}}
 
-If no replay is used, ACER essentially becomes a version of A3C which uses retrace and Q-values, rather than learning the value function. \citep{A3C}
-
+If no replay is used, ACER essentially becomes a version of A3C which uses retrace and Q-values, rather than learning the value function. \citep{A3C} \linebreak
 For the offline setting, replay ratios of 1, 2 and 4 were considered, where a ratio of 4 would mean, that the net is trained on trajectories sampled from the replay buffer 4 times for every online update.
 
 The update was performed using an RMSProp Optimizer.
@@ -215,6 +214,7 @@ with L denoting the loss. $w_q$ and $\beta$ are hyperparameters used to decide h
 \begin{center}
 
 \includegraphics[scale=0.5]{bilder/ACERarchitecture.png}
+\caption{Example setup for 4 thread ACER}
 \end{center}
 
 \end{figure}
@@ -246,87 +246,148 @@ $\epsilon$  & 1e-6 & clipping value denoting the distance to 0 and 1 \\
 \section{Results}
 
 The reward given in the graphics for the y-axis is the capped reward used to train the agent.
-The actual reward achieved within the games will be discussed afterwards.
-The decision to use the capped rewards was made due to their lower variance, and because these rewards were used when training the agent. 
-The x-axis denotes the on-policy steps for the results on sample efficiency, and the computation time in terms of on-policy steps. In our experiments 100.000 on-policy updates on a CPU using 16 threads took about an hour.
+The decision to use the capped rewards was made due to their lower variance, and because these rewards were used when training the agents. Using the capped reward to visualize the results gives a better comparison between the replay ratios, which is the main focus of this thesis.
+
+The x-axis denotes the on-policy steps for the results on sample efficiency, and the computation time. In our experiments 100.000 on-policy updates on a CPU using 16 threads took about an hour.
+
+\
+
+\
+\
+\begin{center}
+\textbf{Breakout}
+
+\end{center}
 
 \begin{figure}[h]
 \includegraphics[scale=0.55]{bilder/breakoutbyonline.png}
 \includegraphics[scale=0.55]{bilder/breakoutbytime.png}
-\caption{ACER results on the Breakout environment in regards to sample efficiency (left) and computation time (right).}
+\caption{\textit {ACER results for Breakout in terms of sample efficiency (left) and computation time (right).}}
 \end{figure}
-\textbf{Breakout}
 
 We can see that ACER is clearly more sample efficient with a higher replay ratio and quickly reaches better rewards. 
-The right side shows the performance in regards to the computation time. Instead of looking at the actual time, we will instead consider the relation towards the online steps, since this does not depend on the hardware. During our experiments,  we found an online step to take about 3 times longer than an offline update.
+The right side shows the performance in regards to the computation time. 
+
+During our experiments,  we found an online step to take about 3 times longer than an offline update.
 In regards to the Breakout environment, we can conclude, that using a higher replay ratio (within the tested ratios) offers better performance in terms of sample efficiency, but can not match the learning speed of the online agent.
+
+\pagebreak
+\begin{center}
+
+\textbf{Space Invaders}
+\end{center}
 
 
 \begin{figure}[h]
 \includegraphics[scale=0.55]{bilder/spaceinvbyonline.png}
 \includegraphics[scale=0.55]{bilder/spaceinvbytime.png}
-\caption{ Results on Space Invaders in terms of sample effciency (left) and comutation time (right).}
+\caption{ \textit{Results for Space Invaders in terms of sample effciency (left) and computation time (right).}}
 \end{figure}
-
-\pagebreak
-\textbf{Space Invaders}
 
 The poor performance of the online variant on Space Invaders came unexpected. Assuming this performance was caused by an unlucky initialization, the same test was performed again, but very simlar results were observed. In comparison, the agents using replay had a much smoother performance curve.
 Unlike with the Breakout environment, a higher replay ratio did not result in a faster learning process.
+
+\begin{center}
+\textbf{Seaquest}
+
+\end{center}
+
 \begin{figure}[h]
 \includegraphics[scale=0.55]{bilder/seaquestbyonline.png}
 \includegraphics[scale=0.55]{bilder/seaquestbytime.png}
-\caption{ACER results on the Seaquest environment in regards to sample efficiency (left) and computation time (right).}
+\caption{\textit{ACER results for Seaquest in terms of sample efficiency (left) and computation time (right).}}
 \label{seafig}
 \end{figure}
 
-\textbf{Seaquest}
 
 No significant performance increase in terms of sample efficiency could be observed. Independent of the replay ratio, all agents learned relatively even in terms of sample efficiency.
 Using a replay ratio of 1 provided a smooth and efficient learning process in terms of both processing time and sample efficiency. \linebreak A significant drop in performance was observed for the online agent. In comparison all the replay agents providing a more smooth and stable learning process.
- 
+\pagebreak
 
-Even though the main purpose of ACER is to provide a sample efficient algorithm, it additionally seems to smoothen the learning process.
+\begin{center}
+\textbf{Riverraid}
+\end{center} 
+
 \begin{figure}[h]
 \includegraphics[scale=0.55]{bilder/riverraidbyonline.png}
 \includegraphics[scale=0.55]{bilder/riverraidbytime.png}
-\caption{ACER results on the Riverraid environment in regards to sample efficiency (left) and computation time (right).}
+\caption{\textit{ACER results on the Riverraid environment in regards to sample efficiency (left) and computation time (right).}}
 
 \end{figure}
 
-\textbf{Riverraid}
 
 The experiments conducted on the Riverraid environment showed a rather slow learning in the beginning for the replay agents, with the replay ratio of 4 getting stuck on a low reward. A possible explanation could be, that the agent uses the trajectories sampled at the beginning of the learning process too often.
 
-An attempt to fix this problem is to fill up a certain amount of the replay buffer first, and start the experience replay afterwards, to not reuse the same trajectory too often in the learning process. Sadly the Riverraid environment was the last environment to do experiments on, leaving us with little time to compare results with and without first filling up the replay buffer for different replay ratios and environments.
+An attempt to fix this problem is to fill up a certain amount of the replay buffer first, and start the experience replay afterwards, to not reuse the same trajectory too often in the early learning process.
 
+\begin{center}
+\textbf{Riverraid}
+\end{center}
 \begin{figure}[h]
 \includegraphics[scale=0.55]{bilder/riverraidreplayonline.png}
 \includegraphics[scale=0.55]{bilder/riverraidreplaytime.png}
-\caption{ACER results on the Riverraid environment in regards to sample efficiency (left) and computation time(right). (1) Uses replay throughout the full learning process. (2) Started replay after 1000 trajectories were saved to the buffer.}
+\caption{
+\textit{
+ACER results on the Riverraid environment in regards to sample efficiency (left) and computation time(right). (1) Uses replay throughout the full learning process. (2) Started replay after 1000 trajectories were saved to the buffer.}}
 \end{figure}
 
+The problem of slow early learning could still be observed even with the replay starting later.
+To make sure both results for the replay-ratio of four were no coincidences further test are necessary. In general the performance seems to improve. 
 
-Even though the observed results showed better overall performance and the agent using a replay ratio of 4 managed to learn somthing, the slow learning in the early phase remained.
 
+\begin{center}
+\textbf{Breakout}
+\end{center}
 
 \begin{figure}[h]
 \includegraphics[scale=0.55]{bilder/breakoutreplayonline.png}
 \includegraphics[scale=0.55]{bilder/breakoutreplaytime.png}
-\caption{ACER results on the Breakout environment in regards to sample efficiency (left) and computation time(right). (1) Uses replay throughout the full learning process. (2) Started replay after 1000 trajectories were saved to the buffer.}
+\caption{\textit{ACER results on the Breakout environment in regards to sample efficiency (left) and computation time(right). (1) Uses replay throughout the full learning process. (2) Started replay after 1000 trajectories were saved to the buffer.}}
 \end{figure}
 
+The replay agents for Breakout showed much faster learning if the replay buffer was filled with samples first.
+
+\begin{center}
+\textbf{Seaquest}
+\end{center}
 
 \begin{figure}[h]
 \includegraphics[scale=0.55]{bilder/seaquestreplayonline.png}
 \includegraphics[scale=0.55]{bilder/seaquestreplaytime.png}
-\caption{ACER results on the Seaquest environment in regards to sample efficiency (left) and computation time(right). (1) Uses replay throughout the full learning process. (2) Started replay after 1000 trajectories were saved to the buffer.}
+\caption{\textit{ACER results on the Seaquest environment in regards to sample efficiency (left) and computation time(right). (1) Uses replay throughout the full learning process. (2) Started replay after 1000 trajectories were saved to the buffer.}}
 \end{figure}
 
-
+In contrary to the results for Breakout and Riverraid, no notable improvements were observed for the Seaquest environment.
 \pagebreak
 
 
+\begin{center}
+\textbf{Breakout}
+\end{center}
+
+\begin{figure}[h]
+\includegraphics[scale=0.55]{bilder/breakoutBConline.png}
+\includegraphics[scale=0.55]{bilder/breakoutBCtime.png}
+\caption{\textit{ACER results on the Breakout environment in regards to sample efficiency (left) and computation time(right). (1) With bias correction and (2) without bias correction}}
+\end{figure}
+
+
+
+\begin{center}
+\textbf{Space Invaders}
+\end{center}
+
+\begin{figure}[h]
+\includegraphics[scale=0.55]{bilder/spaceinvBConline.png}
+\includegraphics[scale=0.55]{bilder/spaceinvBCtime.png}
+\caption{\textit{ACER results on the Space Invaders environment in regards to sample efficiency (left) and computation time(right). (1) With bias correction and (2) without bias correction}}
+\end{figure}
+
+
+
+Replay agents managed to perform well on both the Breakout and the Space Invaders environment even without the use of the bias correction term for the gradient.
+
+\pagebreak
 
 
 \section{Preprocessing Atari Environments}
@@ -349,18 +410,29 @@ In addition, the hyperparameters for the return step: $k=50$ and $\gamma =0.995$
 \begin{figure}[h]
 \includegraphics[scale=1]{bilder/seaquestgamenopre.png}
 \includegraphics[scale=1]{bilder/seaquestgameprepro.png}
-\caption{Seaquest environment after normal (left) and individual (right) preprocessing}
+\caption{\textit{Seaquest environment after normal (left) and individual (right) preprocessing}}
 \end{figure}
 
 \begin{figure}[h]
-\includegraphics[scale=0.8]{bilder/seaquestprepro}
-\caption{Seaquest for default settings \textbf{(1)}, changed hyperparameters \textbf{(2)} and changed hyperparameters with custom preprocessing \textbf{(3)}. A replay ratio of 2 was used for all 3 runs.}
+\includegraphics[scale=0.8]{bilder/seaquestprepro.png}
+\caption{\textit{Seaquest for default settings \textbf{(1)}, changed hyperparameters \textbf{(2)} and changed hyperparameters with custom preprocessing \textbf{(3)}. A replay ratio of 2 was used for all 3 runs.}}
 \end{figure}
-
+\pagebreak
 By applying individual preprocessing to the Seaquest environment, and slightly adjusting the hyperparameters, we managed to both accelerate the learning process and break through the local maximum the learning agents got stuck on in the previous tests.
 
-Even though the results indicate an improved performance for the individually preprocessed environment, a clear statement cannot be made, because the change in hyperparameters managed to outperform the default settings and break through the local optimum in a similar way.
+Even though the results indicate an improved performance for the individually preprocessed environment, a clear statement cannot be made, because an agent learning on the normally preprocessed environment, managed to outperform the default settings and break through the local optimum in a similar way, with only the change in hyperparameters.
 
-\section{Adversial Attacks}
+\pagebreak
 
 \section{Conclusion}
+
+We were able to show, that ACER provides a sample efficient method by reusing experience.
+
+Interesting findings were the fact, that starting the replay process too early might have a negative impact on the learning process.
+Further experiments will be necessary to determine a good starting point for the replay process.
+
+Through preprocessing and changing the hyperparameters for the Seaquest environment, a much better learning process was achieved.
+This shows, that using a single set of hyperparameters for all Atari environment as a benchmark for the performance of a method might not be the ideal approach, since most environments pose unique problems.
+
+Even without the bias correction, the agents were learning fine. More experiments on different environments would be necessary to determine if the bias correction term benefits the learning process.
+\pagebreak

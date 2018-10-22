@@ -2,16 +2,16 @@
 \section{Off-Policy Learning}
 \raggedbottom 
 
-Off-policy methods use data previously sampled under a so-called \textit{behaviour policy} denoted as $\mu(a \mid s)$  which is different to the \textit{current/target policy}  $\pi$ that is optimized.
+Off-policy methods use data previously sampled under a so-called \textit{behavior policy} denoted as $\mu(a \mid s)$  which is different to the \textit{current/target policy}  $\pi$ that is optimized.
 
-One benefit of off-policy learning is the possibility to choose a more exploratory behaviour policy. 
+One benefit of off-policy learning is the possibility to choose a more exploratory behavior policy. 
 Another benefit is the possibility to increase sample efficiency by reusing old data
 \citep{Degris12}.
 
 Off-policy methods can have the drawback of being divergent.
-Asynchronous methods like A3C are always slightly off-policy, but since the behaviour policy is close enough to the target policy, the influence is neglectable.
+Asynchronous methods like A3C are always slightly off-policy, but since the behavior policy is close enough to the target policy, the influence is neglectable.
 
-Whenever the behaviour policy differs too much from the target policy, the algorithm can no longer be viewed as \textit{safe} without correcting for the 'off-policyness' \citep{Munos16}.
+Whenever the behavior policy differs too much from the target policy, the algorithm can no longer be viewed as \textit{safe} without correcting for the 'off-policyness' \citep{Munos16}.
 
 Ensuring convergence even for an arbitrary level of 'off-policyness' is a problem addressed by a multitude of methods.
 We will look at the most important ones, leading up to the retrace-algorithm used for our experiments.
@@ -43,7 +43,7 @@ However if a sample is drawn from a policy which is close to the target policy, 
 
 \citet{Munos16} introduced the retrace($\lambda$) algorithm. By combining ideas of importance sampling and tree-backup, a method with strong convergence, yet low variance was achieved that is still able to use the benefits of full returns.
 
-Similar to how it is done in TB($\lambda$), the traces are safely cut in case of strong "off-policyness", but without impacting the update too much, if the data was sampled under a behaviour policy $\mu$ close to the target policy $\pi$.
+Similar to how it is done in TB($\lambda$), the traces are safely cut in case of strong "off-policyness", but without impacting the update too much, if the data was sampled under a behavior policy $\mu$ close to the target policy $\pi$.
 
 Retrace values for a q funcion are obtained recursively by
 

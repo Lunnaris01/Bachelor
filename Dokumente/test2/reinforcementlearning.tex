@@ -4,7 +4,7 @@ The main components of the reinforcement learning framework are the \textit{agen
 An agent interacts with the \textit{environment} over time, by taking in the environment state, which is usually denoted as $s$ or $x$. Within this work, $s$ will be used as notation for the state.
 The agent evaluates the state and decides on an \textit{action} (denoted as $a$), based on the current state. 
 
-A problem distinct to reinforcement learning is the one of exploration and exploitation. In order to learn the best behaviour, the \textit{agent} needs to make sure to explore the \textit{environment}. Insufficient exploration can lead to suboptimal policies since a path that leads to a high reward might not be found. 
+A problem distinct to reinforcement learning is the one of exploration and exploitation. In order to learn the best behavior, the \textit{agent} needs to make sure to explore the \textit{environment}. Insufficient exploration can lead to suboptimal policies since a path that leads to a high reward might not be found. 
 
 Whenever the agent interacts with the environment, it receives a \textit{reward} and the next state in return.
 Depending on whether the environment is terminal or not, an additional value denoting if the environment has terminated is received. 
@@ -21,7 +21,7 @@ The Atari games considered within this work terminate if the player either wins 
 
 \textbf{Policy}
 
-The behaviour of the agent at any given time $t$ is determined by the \textit{policy}. A policy $\pi$ can roughly be described as a mapping of states to an action or a distribution over actions. 
+The behavior of the agent at any given time $t$ is determined by the \textit{policy}. A policy $\pi$ can roughly be described as a mapping of states to an action or a distribution over actions. 
 We denote the probability of an action $a$ being taken at state $s$ and time $t$ under a policy $\pi$ as
 \begin{equation}
 P_\pi( a \mid s_t) = \pi(a \mid s_t) . 

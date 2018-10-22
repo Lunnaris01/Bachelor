@@ -10,7 +10,7 @@ The goal of reinforcement learning is to create fast and reliable learning algor
 This means, we want to achieve the maximum possible \textit{reward} within an episode or over a period of time if an environment is continuous.
 
 Environments pose a lot of different tasks of varying difficulty.
-Easy environments, like the 'Cartpole'-environment, require the agent to simply balance a pole based on 4 input values with only 2 possible actions, whereas more complex and demanding tasks might have high dimensional images as states with many possible actions to choose from.
+Easy environments, like the 'Cartpole'-environment, require the agent to simply balance a pole based on 4 input values with only 2 possible actions, whereas more complex and demanding tasks might have high dimensional images as states, with many possible actions to choose from.
 
 This thesis will work with the Atari 2600 environments offered by OpenAI \citep{openaigym}
 
@@ -18,11 +18,11 @@ By combining deep learning techniques \citep{Hinton504} with reinforcement learn
 
 However, complex environments like the Atari 2600 games can often be costly to simulate.
 
-ACER \citep{ACER} provides a sample efficient learning agent. This work aims at implementing and evaluating the algorithm.
+ACER \citep{ACER} provides a sample efficient learning way to train the agent. This work aims at implementing and evaluating the algorithm.
 
 To lay out the foundation for ACER, we will first discuss core components of reinforcement learning and take a closer look at policy gradient methods, specifically actor-critic methods and the \textit{Advantage Actor Critic} (A3C) - algorithm \citep{A3C}, followed by an overview of different approaches to off-policy learning from experience.
 
-Finally, the ACER- Algorithm is presented, implemented and evaluated.
+Finally, the ACER algorithm is presented, implemented and evaluated.
 
 
 \pagebreak

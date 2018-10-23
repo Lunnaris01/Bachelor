@@ -2008,19 +2008,19 @@
     <bcf:citekey order="38">entropy</bcf:citekey>
     <bcf:citekey order="39">ACER</bcf:citekey>
     <bcf:citekey order="40">openaigym</bcf:citekey>
-    <bcf:citekey order="41">mnih2015atari</bcf:citekey>
+    <bcf:citekey order="41">nature</bcf:citekey>
     <bcf:citekey order="42">nature</bcf:citekey>
     <bcf:citekey order="43">nature</bcf:citekey>
     <bcf:citekey order="44">mnih2015atari</bcf:citekey>
+    <bcf:citekey order="44">nature</bcf:citekey>
     <bcf:citekey order="45">nature</bcf:citekey>
-    <bcf:citekey order="46">nature</bcf:citekey>
-    <bcf:citekey order="47">A3C</bcf:citekey>
-    <bcf:citekey order="48">nature</bcf:citekey>
+    <bcf:citekey order="46">A3C</bcf:citekey>
+    <bcf:citekey order="47">nature</bcf:citekey>
+    <bcf:citekey order="48">A3C</bcf:citekey>
     <bcf:citekey order="49">A3C</bcf:citekey>
-    <bcf:citekey order="50">A3C</bcf:citekey>
-    <bcf:citekey order="51">nature</bcf:citekey>
-    <bcf:citekey order="52">karpathy</bcf:citekey>
-    <bcf:citekey order="53">ACER</bcf:citekey>
+    <bcf:citekey order="50">nature</bcf:citekey>
+    <bcf:citekey order="51">karpathy</bcf:citekey>
+    <bcf:citekey order="52">ACER</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="nyt" type="entry" sortscheme="nyt">
   <bcf:sorting>

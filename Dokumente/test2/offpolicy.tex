@@ -34,10 +34,10 @@ Even though this method can guarantee convergence \citep{Munos16} for arbitrary 
 
 \subsection{Tree-backup, TB(\lambda)}
 
-The tree-backup method allows off-policy corrections, without the use of importance sampling by using estimated values of untaken actions as an offset to the rewards from the off-policy sample. \citet{Precup00}
+The tree-backup method allows off-policy corrections, without the use of importance sampling by using estimated values of untaken actions as an offset to the rewards from the off-policy sample \citet{Precup00}.
 
 The algorithm provides low variance off-policy learning with strong convergence.
-However if a sample is drawn from a policy which is close to the target policy, the algorithm unnecessarily cuts the traces. Without using the full returns, the learning process is slowed down.
+However, if a sample is drawn from a policy which is close to the target policy, the algorithm unnecessarily cuts the traces. Without using the full returns, the learning process is slowed down.
 \pagebreak
 \subsection{Retrace($\lambda$)}
 

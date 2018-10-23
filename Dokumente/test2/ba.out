@@ -17,7 +17,7 @@
 \BOOKMARK [2][-]{subsection.4.3}{Retrace\(\)}{section.4}% 17
 \BOOKMARK [1][-]{section.5}{Actor-Critic with Experience Replay \(ACER\)}{}% 18
 \BOOKMARK [2][-]{subsection.5.1}{Experimental Setup}{section.5}% 19
-\BOOKMARK [2][-]{subsection.5.2}{Hyperparameter settings}{section.5}% 20
+\BOOKMARK [2][-]{subsection.5.2}{Hyperparameter Settings}{section.5}% 20
 \BOOKMARK [1][-]{section.6}{Results}{}% 21
 \BOOKMARK [1][-]{section.7}{Preprocessing Atari Environments}{}% 22
 \BOOKMARK [1][-]{section.8}{Conclusion}{}% 23

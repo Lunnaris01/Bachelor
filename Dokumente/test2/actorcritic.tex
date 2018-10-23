@@ -99,7 +99,7 @@ Critic-only methods provide a low variance estimate of the expected returns, how
 \subsection{Actor-Only Methods}
 
 Unlike critic-only methods, actor-only methods do not learn any state or state-action values.
-Instead, they perform optimisation steps direclty on the policy $\pi$.
+Instead, they perform optimization steps directly on the policy $\pi$.
 
 Usually the policy $\pi$ is parameterized by $\theta$, denoted as $\pi_\theta$, but deterministic policy gradient methods are possible \citep{DDPG}. 
 
@@ -113,7 +113,7 @@ The learning agent tries to maximize $J(\theta)$ through gradient ascent
 \end{equation}
 
 where $\widehat{\nabla J(\theta_t)}$ denotes an approximated gradient of the performance measure.
-Methods of this schema are policy gradient methods \citep{Sut98} 
+Methods of this schema are policy gradient methods \citep{Sut98}. 
 
 For the episodic case we define $J(\theta)$ to be the initial value of our policy. We should note that this only works under the assumption, that the environments always provides the same initial state.
 

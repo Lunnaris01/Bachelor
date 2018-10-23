@@ -1,15 +1,15 @@
 [0] Config.pm:321> INFO - This is Biber 1.9
 [0] Config.pm:324> INFO - Logfile is 'ba.blg'
-[31] biber:277> INFO - === So Okt 21, 2018, 21:54:34
-[32] Biber.pm:334> INFO - Reading 'ba.bcf'
-[104] Biber.pm:636> INFO - Found 21 citekeys in bib section 0
-[124] Biber.pm:3052> INFO - Processing section 0
-[148] Biber.pm:3190> INFO - Looking for bibtex format file 'references.bib' for section 0
-[151] bibtex.pm:979> INFO - Decoding LaTeX character macros into UTF-8
-[155] bibtex.pm:853> INFO - Found BibTeX data source 'references.bib'
-[483] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[483] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[484] Biber.pm:2929> INFO - Sorting list 'nyt' of type 'entry' with scheme 'nyt' and locale 'en-US'
-[484] Biber.pm:2933> INFO - No sort tailoring available for locale 'en-US'
-[574] bbl.pm:517> INFO - Writing 'ba.bbl' with encoding 'UTF-8'
-[579] bbl.pm:606> INFO - Output to ba.bbl
+[33] biber:277> INFO - === Di Okt 23, 2018, 18:49:22
+[33] Biber.pm:334> INFO - Reading 'ba.bcf'
+[105] Biber.pm:636> INFO - Found 21 citekeys in bib section 0
+[122] Biber.pm:3052> INFO - Processing section 0
+[142] Biber.pm:3190> INFO - Looking for bibtex format file 'references.bib' for section 0
+[145] bibtex.pm:979> INFO - Decoding LaTeX character macros into UTF-8
+[148] bibtex.pm:853> INFO - Found BibTeX data source 'references.bib'
+[474] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[474] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[474] Biber.pm:2929> INFO - Sorting list 'nyt' of type 'entry' with scheme 'nyt' and locale 'en-US'
+[474] Biber.pm:2933> INFO - No sort tailoring available for locale 'en-US'
+[567] bbl.pm:517> INFO - Writing 'ba.bbl' with encoding 'UTF-8'
+[572] bbl.pm:606> INFO - Output to ba.bbl

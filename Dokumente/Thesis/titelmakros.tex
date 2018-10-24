@@ -8,8 +8,8 @@
 % Lehrstuhl fuer Datenbanken und Informationssysteme
 % Version 2.2 - 2.3.2010
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\AN}{twoside}
-\newcommand{\AUS}{}
+\newcommand{\AN}{}
+\newcommand{\AUS}{twoside}
 %\newcommand{\englisch}{}
 %\newcommand{\deutsch}{\usepackage[german]{babel}}
 
@@ -28,7 +28,7 @@
 %\pdfcompresslevel=9 % compression level for text and image;
 %\pdftrue \fi
 
-\documentclass[11pt,a4paper, \zweiseitig]{article}
+\documentclass[11pt,a4paper, \einseitig]{article}
 
 
 
@@ -219,10 +219,6 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\clearpage
-\begin{titlepage}
-  ~                % eine leere Seite hinter dem Deckblatt
-\end{titlepage}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
 \begin{titlepage}
@@ -273,8 +269,7 @@ Düsseldorf, den \abgabedatum \hspace*{2cm} & \underline{\hspace{6cm}}\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Leerseite bei zweiseitigem Druck
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\ifthenelse{\equal{\zweiseitig}{twoside}}
-  {\clearpage\begin{titlepage}~\end{titlepage}}{}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage \setcounter{page}{1}
 \pagenumbering{roman}
@@ -287,7 +282,6 @@ Düsseldorf, den \abgabedatum \hspace*{2cm} & \underline{\hspace{6cm}}\\
 % Leere Seite, falls Inhaltsverzeichnis mit ungerader Seitenzahl und 
 % doppelseitiger Druck
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\ifthenelse{ \( \equal{\zweiseitig}{twoside} \and \not \isodd{\value{page}} \)}
-	{\pagebreak \thispagestyle{empty} \cleardoublepage}{\clearpage}
+
 
 

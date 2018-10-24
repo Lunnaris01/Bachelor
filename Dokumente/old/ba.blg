@@ -1,9 +1,0 @@
-[0] Config.pm:321> INFO - This is Biber 1.9
-[0] Config.pm:324> INFO - Logfile is 'ba.blg'
-[68] biber:277> INFO - === Sa Okt  6, 2018, 21:29:42
-[69] Biber.pm:334> INFO - Reading 'ba.bcf'
-[196] Biber.pm:636> INFO - Found 5 citekeys in bib section 0
-[224] Biber.pm:3052> INFO - Processing section 0
-[269] Biber.pm:3190> INFO - Looking for bibtex format file 'references.bib' for section 0
-[385] Utils.pm:160> ERROR - Cannot find 'references.bib'!
-[385] Biber.pm:111> INFO - ERRORS: 1

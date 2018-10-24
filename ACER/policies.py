@@ -2,18 +2,22 @@ import tensorflow as tf
 from utils import conv2d, relu, ortho_init
 import numpy as np
 
-
-# CNN from NATURE Paper, which was used for the ACER Paper
-def build_cnn2(states, reuse=False):
-    #        self.init = tf.initializers.random_normal(0,0.1)
+def build_cnn(states, reuse=False,init=None):
+    """
+    Builds ACER network, returns the shared layer
+    """
+    #init = tf.initializers.random_normal(0,0.1)
 
     with tf.variable_scope("shared_policy_net"):
         with tf.variable_scope("conv_layer_1"):
-            conv_l1 = relu(conv2d(states, 8, 4, 32))
+            conv_l1 = relu(conv2d(states, 8, 4, 32,init))
+            print(conv_l1)
         with tf.variable_scope("conv_layer_2"):
-            conv_l2 = relu(conv2d(conv_l1, 4, 2, 64))
+            conv_l2 = relu(conv2d(conv_l1, 4, 2, 64,init))
+            print(conv_l2)
         with tf.variable_scope("conv_layer_3"):
-            conv_l3 = relu(conv2d(conv_l2, 3, 1, 64))
+            conv_l3 = relu(conv2d(conv_l2, 3, 1, 64,init))
+            print(conv_l3)
         with tf.name_scope("flatten"):
             conv_l3_flat = tf.layers.flatten(conv_l3)
         with tf.variable_scope("shared_fully_connected"):
@@ -21,27 +25,7 @@ def build_cnn2(states, reuse=False):
                 inputs=conv_l3_flat,
                 units=512,
                 activation=tf.nn.relu,
-                kernel_initializer=ortho_init(np.sqrt(2)),
-            )
-    return shared_fc
-
-def build_cnn(states, reuse=False):
-    #        self.init = tf.initializers.random_normal(0,0.1)
-
-    with tf.variable_scope("shared_policy_net"):
-        with tf.variable_scope("conv_layer_1"):
-            conv_l1 = relu(conv2d(states, 8, 4, 32))
-        with tf.variable_scope("conv_layer_2"):
-            conv_l2 = relu(conv2d(conv_l1, 4, 2, 64))
-        with tf.variable_scope("conv_layer_3"):
-            conv_l3 = relu(conv2d(conv_l2, 3, 1, 64))
-        with tf.name_scope("flatten"):
-            conv_l3_flat = tf.layers.flatten(conv_l3)
-        with tf.variable_scope("shared_fully_connected"):
-            shared_fc = tf.layers.dense(
-                inputs=conv_l3_flat,
-                units=512,
-                activation=tf.nn.relu,
+                kernel_initializer = init,
             )
     return shared_fc
 

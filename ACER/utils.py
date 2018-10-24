@@ -3,21 +3,13 @@ import tensorflow as tf
 from skimage import transform, color
 
 
-def conv2d2(x, kernel, stride, filters):
+def conv2d(x, kernel, stride, filters, init=None):
     return tf.layers.conv2d(inputs=x,
                             strides=stride,
                             filters=filters,
                             kernel_size=kernel,
                             padding='VALID',
-                            kernel_initializer=ortho_init(np.sqrt(2)),
-                            )
-
-def conv2d(x, kernel, stride, filters):
-    return tf.layers.conv2d(inputs=x,
-                            strides=stride,
-                            filters=filters,
-                            kernel_size=kernel,
-                            padding='VALID',
+                            kernel_initializer=init,
                             )
 
 

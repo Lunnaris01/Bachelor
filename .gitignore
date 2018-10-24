@@ -103,6 +103,6 @@ venv.bak/
 # mypy
 .mypy_cache/
 # checkpoints / tb files
-ACER_ACTUALLY/saves/
+ACER/saves/
 # JabRef
 Dokuments/JabRef*

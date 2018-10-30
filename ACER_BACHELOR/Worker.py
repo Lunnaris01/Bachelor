@@ -78,15 +78,17 @@ class Worker(object):
 
                     
     #same as work_acer, just with added Tensorboard summary and writing the rewards to disk and saving the parameters + occasional print statements.                
-    def work_and_eval_acer(self, net_saver, TB_DIR):
+    def work_and_eval_acer(self, net_saver, TB_DIR, evalrewards=[]):
         b_states = [None]
         done = True
         step = 0
         runningreward = 1
         bestreward = 0
         rewardlist=[]
+        if evalrewards !=[]:
+            runningreward = evalrewards[-1]
+            print(runningreward)
         next_verbose = 0
-        evalrewards= []
         summary_writer = tf.summary.FileWriter(TB_DIR + "/tb", self.sess.graph, flush_secs=30)
         print(self.name, " using ", self.offline_steps, "offline steps, per online step")
 
@@ -133,7 +135,7 @@ class Worker(object):
 
 def test(agent, env, runs, render=True, capture=False, capture_dir=None):
     for it in range(runs):
-        if it=runs-1 and capture=True:
+        if it == runs-1 and capture == True:
              env = wrappers.Monitor(env, capture_dir)
         state = env.reset()
         rewardlist = []

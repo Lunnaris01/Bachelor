@@ -16,6 +16,7 @@ class Atari_Environment(object):
         Initialize the environment, taking in some kind of Atari Environment like the OpenAI Gym environment.
         The env needs to provice a step and reset function, have an action_space and observation_space variable.
         Clips reward to the intervall [-1,1] if clipreward is True.
+        Most names are choosen to 
         """
         self.env = env
         self.frameskip = use_every_n_frame
@@ -26,6 +27,10 @@ class Atari_Environment(object):
         self.observation_space = env.observation_space
         self.observation_space.shape = (84,84,4)
         self.framebuffer = []
+        #needed for capturing video of the game.
+        self.reward_range = self.env.reward_range
+        self.metadata = self.env.metadata
+        self.spec = self.env.spec
 
     def reset(self):
         """
@@ -49,6 +54,6 @@ class Atari_Environment(object):
             reward=np.sign(reward)
         return self.framebuffer,reward,done,info 
 
-    def render(self):
-        frame = self.env.render(mode='rgb_array')
+    def render(self,mode='rgb_array'):
+        frame = self.env.render(mode=mode)
         return frame

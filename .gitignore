@@ -104,5 +104,8 @@ venv.bak/
 .mypy_cache/
 # checkpoints / tb files
 ACER/saves/
+ACER_BACHELOR/saves/
+ACER_GPU/saves/
+
 # JabRef
 Dokuments/JabRef*

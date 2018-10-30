@@ -50,4 +50,5 @@ class Atari_Environment(object):
         return self.framebuffer,reward,done,info 
 
     def render(self):
-        self.env.render()
+        frame = self.env.render(mode='rgb_array')
+        return frame

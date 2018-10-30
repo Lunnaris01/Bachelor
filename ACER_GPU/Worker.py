@@ -41,9 +41,11 @@ class Worker(object):
         self.offline_ratio = offline_ratio
 
     def work_acer(self):
-        b_states=[None]
+        b_states=[[None] for _ in self.envs]
         dones = [True for _ in self.envs]
+        print(dones)
         step = 0
+        rewardlist=[]
         print(self.name, " using ", self.offline_ratio, " per online step")
 
         while step < self.MAX_STEPS:
@@ -51,19 +53,24 @@ class Worker(object):
             """
             for it in range(len(self.envs)):
                 # n -step rollout from the environment, with n = RETURN_STEPS or until done.
-                b_states, b_actions, b_rewards, b_mus, done = rollout(self.agent, self.envs[it], [b_states[-1]], dones[it], self.RETURN_STEPS)
-                pi, q_a, val = self.agent.get_retrace_values(b_states[:-1], b_actions)
-
+                b_states[it], b_actions, b_rewards, b_mus, dones[it] = rollout(self.agent, self.envs[it], [b_states[it][-1]], dones[it], self.RETURN_STEPS)
+                pi, q_a, val = self.agent.get_retrace_values(b_states[it][:-1], b_actions)
+                if it == 0:
+                    rewardlist.append(np.sum(b_rewards))
+                    if dones[it]==True:
+                        print(step,np.sum(rewardlist))
+                        rewardlist=[]
+                        
                 importance_weights = np.divide(pi, np.add(b_mus, 1e-14))
                 importance_weights_a = np.take(np.reshape(importance_weights, [-1]), (
                         np.arange(importance_weights.shape[0]) * importance_weights.shape[1] + b_actions))
             #calculate retrace values.
-                retrace_targets = q_retrace(b_rewards, done, q_a, val, importance_weights_a, self.DISCOUNT)
+                retrace_targets = q_retrace(b_rewards, dones[it], q_a, val, importance_weights_a, self.DISCOUNT)
                                     
             #update step, returns current global step and summary (not used here)
-                _, step = self.agent.update_step(b_states[:-1], b_actions, retrace_targets, importance_weights)
+                _, step = self.agent.update_step(b_states[it][:-1], b_actions, retrace_targets, importance_weights)
             # append trajectory to the replay buffer
-                self.memory[it].remember((b_states, b_actions, b_rewards, b_mus, done))
+                self.memory[it].remember((b_states[it], b_actions, b_rewards, b_mus, dones[it]))
             #offline version, instead of rollout the trajectory is sampled.
                 if self.offline_ratio>0 and self.memory.can_sample():
                     for _ in range(self.offline_ratio):

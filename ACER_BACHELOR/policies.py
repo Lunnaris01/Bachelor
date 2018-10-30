@@ -11,13 +11,10 @@ def build_cnn(states, reuse=False,init=None):
     with tf.variable_scope("shared_policy_net"):
         with tf.variable_scope("conv_layer_1"):
             conv_l1 = relu(conv2d(states, 8, 4, 32,init))
-            print(conv_l1)
         with tf.variable_scope("conv_layer_2"):
             conv_l2 = relu(conv2d(conv_l1, 4, 2, 64,init))
-            print(conv_l2)
         with tf.variable_scope("conv_layer_3"):
             conv_l3 = relu(conv2d(conv_l2, 3, 1, 64,init))
-            print(conv_l3)
         with tf.name_scope("flatten"):
             conv_l3_flat = tf.layers.flatten(conv_l3)
         with tf.variable_scope("shared_fully_connected"):

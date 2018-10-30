@@ -59,7 +59,7 @@ class ACERNetwork(object):
                 with tf.name_scope("value_loss"):
                     self.value_loss = tf.reduce_mean(
                         tf.square(self.tf_q_retrace_targets - self.action_quality))
-
+                
                 with tf.name_scope("merged_loss"):
                     self.loss = self.policy_loss - self.entropy * self.entropy_w + self.value_loss * self.val_w
 
@@ -69,13 +69,13 @@ class ACERNetwork(object):
                 tf.summary.scalar("value_loss", self.value_loss)
                 tf.summary.scalar("loss", self.loss)
                 self.summary_op = tf.summary.merge_all()
-
+            # calculate gradients, clip gradients and apply them to the global net.
             with tf.name_scope("update_global"):
                 grads = tf.gradients(self.loss, self.tf_trainable)
                 clipped_grads, _ = tf.clip_by_global_norm(grads, 10)
                 grads_vars = list(zip(clipped_grads, GlobalNet.tf_trainable))
                 self.train_op = GlobalNet.optimizer.apply_gradients(grads_vars, global_step=GlobalNet.global_step)
-
+            # synchonize thread parameters with shared parameters.
             with tf.name_scope("sync_target_net"):
                 self.update_target_net = [local_params.assign(global_params) for local_params, global_params in
                                           zip(self.tf_trainable, GlobalNet.tf_trainable)]
@@ -122,6 +122,9 @@ class ACERNetwork(object):
         return values
 
     def prep_states(self, states):
+        """
+        Preprocesses the state to float arrays, as the states are saved as int8 to reduce memory cost.
+        """
         if len(np.array(states).shape) < len(self.state_shape) + 1:
             states = np.expand_dims(states, 0)
         if type(states[0][0][0][0]) == np.uint8:

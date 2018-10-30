@@ -1,6 +1,7 @@
 import numpy as np
 import tensorflow as tf
 from utils import lambda_return, q_retrace, rollout
+from gym import wrappers
 from ReplayBuffer import *
 
 
@@ -44,7 +45,7 @@ class Worker(object):
         b_states=[None]
         done = True
         step = 0
-        print(self.name, " using ", self.offline_steps, " per online step")
+        print(self.name, " using ", self.offline_steps, "offline steps, per online step")
 
         while step < self.MAX_STEPS:
             """
@@ -87,6 +88,7 @@ class Worker(object):
         next_verbose = 0
         evalrewards= []
         summary_writer = tf.summary.FileWriter(TB_DIR + "/tb", self.sess.graph, flush_secs=30)
+        print(self.name, " using ", self.offline_steps, "offline steps, per online step")
 
         while step < self.MAX_STEPS:
             self.agent.update_target()
@@ -129,16 +131,18 @@ class Worker(object):
                     
                     
 
-    def test(agent, env, runs, render=True, capture=False, capture_dir=None):
-        for it in range(runs):
-            state = env.reset()
-            rewardlist = []
-            done = False
-            while not done:
-                action = agent.get_action(state)
-                state, reward, done, _ = env.step(action)
-                rewardlist.append(reward)
-                if render:
-                    env.render()
-            print("Run ", it, "Reward: ", np.sum(rewardlist))
+def test(agent, env, runs, render=True, capture=False, capture_dir=None):
+    for it in range(runs):
+        if it=runs-1 and capture=True:
+             env = wrappers.Monitor(env, capture_dir)
+        state = env.reset()
+        rewardlist = []
+        done = False
+        while not done:
+            action = agent.get_action(state)
+            state, reward, done, _ = env.step(action)
+            rewardlist.append(reward)
+            if render:
+                env.render()
+        print("Run ", it, "Reward: ", np.sum(rewardlist))
 

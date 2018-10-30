@@ -20,6 +20,6 @@ class ReplayBuffer(object):
         return self.memory[index[0]]
 
     def can_sample(self):
-        if len(self.memory) < 1:
+        if len(self.memory) < self.memory_max_size/3:
             return False
         return True

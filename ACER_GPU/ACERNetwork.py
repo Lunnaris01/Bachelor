@@ -14,8 +14,11 @@ class ACERNetwork(object):
         self.entropy_w = entropy_w
         self.trunc_val = 10.0
         self.global_step = tf.Variable(0, trainable=False, name='global_step')
+        #inputs
         self.tf_states = tf.placeholder(tf.float32, (None,) + self.state_shape, name="states")
         self.tf_actions = tf.placeholder(tf.int32, shape=[None], name="actions")
+        self.tf_q_retrace_targets = tf.placeholder(tf.float32, shape=[None], name="retrace_targets")
+        self.tf_importance_weights = tf.placeholder(tf.float32, shape=[None, self.action_n], name="Importance_weights")
 
         self.optimizer = tf.train.RMSPropOptimizer(learning_rate=lr, decay=decay)
 
@@ -28,9 +31,6 @@ class ACERNetwork(object):
 
 
         self.tf_trainable = tf.trainable_variables("net_" + scope)
-
-        self.tf_q_retrace_targets = tf.placeholder(tf.float32, shape=[None], name="retrace_targets")
-        self.tf_importance_weights = tf.placeholder(tf.float32, shape=[None, self.action_n], name="Importance_weights")
 
         self.advantages = self.tf_q_retrace_targets - self.values
         self.log_pi = tf.log(tf.clip_by_value(self.pi, eps, 1 - eps))
